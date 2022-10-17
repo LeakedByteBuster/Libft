@@ -6,7 +6,7 @@
 #    By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 20:08:38 by mfouadi           #+#    #+#              #
-#    Updated: 2022/10/17 05:16:42 by mfouadi          ###   ########.fr        #
+#    Updated: 2022/10/17 22:23:35 by mfouadi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@ CC = cc
 CFLAGS = -Werror -Wextra -Wall
 
 SRC = ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlcpy.c \
-		ft_isalpha.c ft_isdigit.c ft_strlcat.c ft_strlen.c main.c ft_strncmp.c
+		ft_isalpha.c ft_isdigit.c ft_strlcat.c ft_strlen.c \
+		main.c ft_strncmp.c ft_toupper.c ft_tolower.c
+
 
 OBJECTS  = $(SRC:.c=.o)
 

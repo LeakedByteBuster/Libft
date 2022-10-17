@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
-
+#include <stdlib.h>
  
+
+#define TEST_SUCCESS
 // int	main()
 // {
 // 	printf("%d\n",ft_isalnum('2'));
@@ -41,19 +43,20 @@
 // 	printf("string : %s\n", dst );
 
 // 	return 0;
-// }
+// // }
 
 // int	main()
 // {
+//     char    *dst;
+//     char *dstr;
 // 	size_t	size;
 	
-// 	size = 30;
-// 	char	dst[size];
-// 	char	dstr[size];
-// 	printf("MINE : %zu\n", ft_strlcpy(dst, "helldofekiddwdwb9=3hbhjec", sizeof(dst)));
-// 	printf("REAL : %lu\n\n", strlcpy(dstr, "helloejckfhdwdw1dcjchbcsd", sizeof(dstr)));
-// 	printf("MINE : %s\n", dst);	
-// 	printf("REAL : %s\n\n", dstr);
+// 	*dstr = "helldofekiddwdwb9=3hbhjec";
+// 	*dst = "helldofekiddwdwb9=3hbhjec";
+// 	printf("MINE : %c\n", ft_strncmp(dst, "helldofekiddwdwb9=3hbhjec", sizeof(dst)));
+// 	printf("REAL : %c\n\n", strncmp(dstr, "helloejckfhdwdw1dcjchbcsd", sizeof(dstr)));
+// 	printf("MINE : %c\n", dst);	
+// 	printf("REAL : %c\n\n", dstr);
 // 	return 0;
 // }
  
@@ -84,4 +87,10 @@
 
 //     return(0);
 // }
+int main()
+{
+	char b[0xF] = "nyan !";
 
+	printf("%lu", strlcat(((void *)0), b, 0));
+	// exit(TEST_SUCCESS);
+}
