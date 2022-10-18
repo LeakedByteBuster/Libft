@@ -87,10 +87,20 @@
 
 //     return(0);
 // }
-int main()
-{
-	char b[0xF] = "nyan !";
+// int main()
+// {
+// 	char b[0xF] = "nyan !";
 
-	printf("%lu", strlcat(((void *)0), b, 0));
-	// exit(TEST_SUCCESS);
-}
+// 	printf("%lu", strlcat(((void *)0), b, 0));
+// 	// exit(TEST_SUCCESS);
+// }
+// int	main()
+// {
+// 	char *s1 = "omg1|||||||||||||";
+// 	char *s2 = "omg1||||||||||||||||";
+// 	size_t size = 22;
+// 	// int i1 = ((strncmp(s1, s2, size) > 0) ? 1 : ((strncmp(s1, s2, size) < 0) ? -1 : 0));
+// 	// int i2 = ((ft_strncmp(s1, s2, size) > 0) ? 1 : ((ft_strncmp(s1, s2, size) < 0) ? -1 : 0));
+
+// 		printf("%d", strncmp(s1, s2, size));
+// }
