@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../libft-unit-test-master"
+		},
+		{
+			"path": "../../personal"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"string": "c",
+			"string_view": "c"
+		}
+	}
+}

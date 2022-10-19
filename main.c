@@ -93,14 +93,25 @@
 
 // 	printf("%lu", strlcat(((void *)0), b, 0));
 // 	// exit(TEST_SUCCESS);
-// }
+// // }
 // int	main()
 // {
-// 	char *s1 = "omg1|||||||||||||";
-// 	char *s2 = "omg1||||||||||||||||";
-// 	size_t size = 22;
+// 	char s1[] = "omg1|||||||||||||";
+// 	char s2[] = "";
+// 	size_t size = 30;
 // 	// int i1 = ((strncmp(s1, s2, size) > 0) ? 1 : ((strncmp(s1, s2, size) < 0) ? -1 : 0));
 // 	// int i2 = ((ft_strncmp(s1, s2, size) > 0) ? 1 : ((ft_strncmp(s1, s2, size) < 0) ? -1 : 0));
 
-// 		printf("%d", strncmp(s1, s2, size));
+// 		printf("%s", ft_strnstr(s1, s2, size));
 // }
+
+int main()
+{
+// 	char *s1 = "see FF your FF return FF now FF";
+// 	char *s2 = "FF";
+// 	size_t max = strlen(s1);
+// 	// char *i1 = strnstr(s1, s2, max);
+
+    // printf("%s\n", i1);
+    printf("s\n");
+}
