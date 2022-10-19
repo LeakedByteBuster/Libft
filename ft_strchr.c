@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 22:25:51 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/19 01:42:20 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/10/19 01:25:36 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/10/19 02:19:39 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// lower case to upper case letter conversion
+// locate character in string
+#include "libft.h"
 
-int ft_toupper(int  c)
+char    *ft_strchr(const char *s, int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return(c - 32);
-    return (c);
+    int i;
+
+    i = 0;
+    if (c == '\0')
+    {
+        while (!(*s == '\0'))
+            s++;
+        return ((char *)(s));
+    }
+    while (*s != '\0')
+    {
+        if (*s == c)
+           return ((char *)(s));
+        s++;
+    }
+    return (NULL);
 }

@@ -105,13 +105,13 @@
 // 		printf("%s", ft_strnstr(s1, s2, size));
 // }
 
-int main()
-{
-// 	char *s1 = "see FF your FF return FF now FF";
-// 	char *s2 = "FF";
-// 	size_t max = strlen(s1);
-// 	// char *i1 = strnstr(s1, s2, max);
+// int main()
+// {
+// // 	char *s1 = "see FF your FF return FF now FF";
+// // 	char *s2 = "FF";
+// // 	size_t max = strlen(s1);
+// // 	// char *i1 = strnstr(s1, s2, max);
 
-    // printf("%s\n", i1);
-    printf("s\n");
-}
+//     // printf("%s\n", i1);
+//     printf("s\n");
+// }
