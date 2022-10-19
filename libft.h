@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/19 01:45:18 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/19 02:46:26 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int ft_toupper(int  c);
 int ft_tolower (int c);
 size_t  ft_strlen(const char *s);
 char    *ft_strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
