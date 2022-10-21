@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 02:33:45 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/19 23:09:30 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/10/20 23:41:20 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/10/21 00:39:26 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// write zeroes to a byte string
 
-char    *ft_strrchr(const char *s, int c)
+void ft_bzero(void *s, size_t n)
 {
-    int i;
-    if (!*s)
-        return (NULL);
-     i = ft_strlen(s) ;
-
-    if (c == '\0')
-        return ((char *)s + i);
-// Unicode (unsigned char)
-    while (i >= 0)
+//casting to char* since 0 and '\0' are characters
+    while (n > 0 && *(char*)s != '\0')
     {
-        i--;
-        if (s[i] == (unsigned char)(c))
-            return ((char *)(s + i));
+        *(char*)s = 0;
+        s++;
+        n--;
     }
-    return (NULL);
+    return;
 }

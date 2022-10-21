@@ -6,7 +6,7 @@
 #    By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 20:08:38 by mfouadi           #+#    #+#              #
-#    Updated: 2022/10/19 02:47:56 by mfouadi          ###   ########.fr        #
+#    Updated: 2022/10/21 00:50:59 by mfouadi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Werror -Wextra -Wall
 SRC = ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlcpy.c \
 		ft_isalpha.c ft_isdigit.c ft_strlcat.c ft_strlen.c \
 		main.c ft_strncmp.c ft_toupper.c ft_tolower.c ft_strnstr.c \
-		ft_strchr.c ft_strrchr.c
+		ft_strchr.c ft_strrchr.c ft_memset.c ft_bzero.c ft_memcpy.c
 
 HEADER = libft.h
 

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 02:33:45 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/19 23:09:30 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/10/21 00:46:21 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/10/21 01:33:52 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    int i;
-    if (!*s)
-        return (NULL);
-     i = ft_strlen(s) ;
+    size_t dst_len;
+    size_t  i;
 
-    if (c == '\0')
-        return ((char *)s + i);
-// Unicode (unsigned char)
-    while (i >= 0)
+    dst_len = ft_strlen(dst);
+    if (n == 0)
+        return (NULL);
+    i = 0;
+    while (src != '\0' && i > dst_len - 1)
     {
-        i--;
-        if (s[i] == (unsigned char)(c))
-            return ((char *)(s + i));
+        dst = (void*)src;
+        dst++;
+        src++;
+        i++;
     }
-    return (NULL);
+    return(dst);
 }

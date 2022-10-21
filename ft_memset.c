@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 02:33:45 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/19 23:09:30 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/10/19 23:14:52 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/10/20 23:39:51 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//fill a byte string with a byte value
+
 #include "libft.h"
+#include <stdio.h>
 
-char    *ft_strrchr(const char *s, int c)
+void    *ft_memset(void *b, int c, size_t len)
 {
-    int i;
-    if (!*s)
-        return (NULL);
-     i = ft_strlen(s) ;
-
-    if (c == '\0')
-        return ((char *)s + i);
-// Unicode (unsigned char)
-    while (i >= 0)
+    size_t i;
+    size_t  tmp;
+    unsigned char cast_c;
+    
+    cast_c = (unsigned char)(c);
+    tmp = len;
+    i = 0;
+    while (len > 0)
     {
-        i--;
-        if (s[i] == (unsigned char)(c))
-            return ((char *)(s + i));
+        *(unsigned char *)(b) = cast_c;
+        b++;
+        len--;
     }
-    return (NULL);
+
+    return ((unsigned char*)b - tmp);
 }
