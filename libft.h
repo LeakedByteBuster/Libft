@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/21 04:13:50 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/21 05:24:48 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 void    *ft_memset(void *b, int c, size_t len);
 void    *ft_memchr(const void *s, int c, size_t n);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
