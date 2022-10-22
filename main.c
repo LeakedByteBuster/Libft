@@ -113,5 +113,12 @@
 // // 	// char *i1 = strnstr(s1, s2, max);
 
 //     // printf("%s\n", i1);
-//     printf("s\n");
+//     // printf("s\n");
+//     char *src = strdup("samao3alikom");
+//     printf("%s\n", memmove(src, src + 1, -1));
 // }
+
+int main()
+{
+    return(printf("%d", ft_atoi("\n-99999999999")));
+}
