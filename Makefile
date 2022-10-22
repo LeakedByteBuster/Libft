@@ -6,7 +6,7 @@
 #    By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 20:08:38 by mfouadi           #+#    #+#              #
-#    Updated: 2022/10/21 22:27:53 by mfouadi          ###   ########.fr        #
+#    Updated: 2022/10/22 21:15:41 by mfouadi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ all: $(NAME)
 
 $(NAME) :$(OBJECTS)
 #	$(CC) $(CFLAGS) -c $(SRC)
-	ar r $(NAME) $(OBJECTS)
+	ar r $(NAME) $(OBJECTS) $@ $?
 
 #%.o:%.c $(HEADER)
 #	$(CC) $(CFLAGS) -c $< -o $@
