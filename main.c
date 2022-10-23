@@ -115,10 +115,12 @@
 //     // printf("%s\n", i1);
 //     // printf("s\n");
 //     char *src = strdup("samao3alikom");
-//     printf("%s\n", memmove(src, src + 1, -1));
-// }
+// //     printf("%s\n", memmove(src, src + 1, -1));
+// // }
 
-int main()
-{
-    return(printf("%d", ft_atoi("\n-99999999999")));
-}
+// int main()
+// {
+//     int size = 8539;
+//     void *ptr = ft_calloc(size, sizeof(int));
+//     return(printf("%d", &ptr));
+// }

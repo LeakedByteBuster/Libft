@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 02:33:45 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/22 22:34:23 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/10/23 00:16:47 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/10/23 00:57:15 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//save a copy of a string
 #include "libft.h"
+#include <stdlib.h>
 
-char    *ft_strrchr(const char *s, int c)
+char    *ft_strdup(const char *s1)
 {
-    int i;
-    if (!*s)
-        return (NULL);
-     i = ft_strlen(s) ;
-
-    if (c == '\0')
-        return ((char *)s + i);
-// Unicode (unsigned char)
-    while (i >= 0)
-    {
-        i--;
-        if (s[i] == (unsigned char)(c))
-            return ((char *)(s + i));
-    }
-    return (NULL);
+    char *ptr1;
+    size_t s1_len;
+    
+    s1_len = ft_strlen(s1);
+    // +1 for '\0'
+    ptr1 = (char *)malloc(s1_len + 1);
+    if (ptr1 == (void *)0)
+        return ptr1;
+    while (*s1 != '\0')
+        *ptr1++ = *s1++;
+    *ptr1 = '\0';
+    return (ptr1 - s1_len);
 }

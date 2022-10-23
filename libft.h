@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/21 22:27:47 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/23 00:19:28 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ int ft_tolower (int c);
 int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 size_t  ft_strlen(const char *s);
+char    *ft_strdup(const char *s1);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
+void    *ft_calloc(size_t count, size_t size);
 void    *ft_memset(void *b, int c, size_t len);
 void    *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
