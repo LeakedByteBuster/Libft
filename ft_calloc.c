@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:56:31 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/23 00:13:09 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/23 03:28:23 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 *If space is insufficient, allocation fails and returns a NULL pointer
 */
 #include "libft.h"
-#include <stdlib.h>
 
 void    *ft_calloc(size_t count, size_t size)
 {

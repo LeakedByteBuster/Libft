@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 19:47:20 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/23 01:25:25 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/10/23 20:43:44 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/10/23 21:03:22 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//copy byte string
-//The two strings may overlap
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    size_t tmp;
+	char *newStr;
+	size_t len_s1;
+	size_t len_s2;
 
-    tmp = len;
-    if (len == 0 || (src == NULL && dst == NULL))
-        return (dst);
-    while (len-- > 0)
-        *(char *)dst++ = *(char *)src++;
-    return (dst - tmp);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	
+	newStr = (char *)malloc(len_s1 + len_s2 + NULL_CHAR);
+	if (!newStr)
+		return (newStr);
+	while (s1++)
+		*newStr++ = *(char *)s1++;
+	newStr += len_s1;
+	while (s2++)
+		*newStr++ = *(char *)s2++;
+	*newStr = '\0';
+	return (newStr);
 }
