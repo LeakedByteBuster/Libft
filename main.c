@@ -124,9 +124,9 @@
 //     // void *ptr = ft_calloc(size, sizeof(int));
 //     return(printf("%s", ft_strnstr(((void *)0), "fake", 3)));
 // }
-int main()
-{
-    char *str = "01234";
-	size_t size = 10;
-	printf("%s", ft_substr(str, 10, size));
-}
+// int main()
+// {
+//     char *str = "01234";
+// 	size_t size = 10;
+// 	printf("%s", ft_substr(str, 10, size));
+// }

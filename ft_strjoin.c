@@ -6,10 +6,12 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 20:43:44 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/23 21:53:19 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/23 22:55:31 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Allocates (with malloc(3)) and returns a new string
+//which is the result of the concatenation of ’s1’ and ’s2’
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
