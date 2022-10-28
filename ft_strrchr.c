@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 02:33:45 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/22 22:34:23 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/27 00:16:54 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char    *ft_strrchr(const char *s, int c)
 {
     int i;
+   
     if (!*s)
         return (NULL);
      i = ft_strlen(s) ;

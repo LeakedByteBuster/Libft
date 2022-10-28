@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/25 00:28:20 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/28 01:57:16 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 size_t  ft_strlen(const char *s);
 char    *ft_strdup(const char *s1);
+char **ft_split(char const *s, char c);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 void    *ft_calloc(size_t count, size_t size);

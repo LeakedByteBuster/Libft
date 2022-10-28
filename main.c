@@ -114,11 +114,12 @@
 
 //     // printf("%s\n", i1);
 //     // printf("s\n");
-//     char *src = strdup("samao3alikom");
-//     printf("%s\n", memmove(src, src, -1));
+//     char *src = "samao3alikodddrefdm";
+//     // char *srcs = "amao3alikhodddrefdm";
+//     printf("%s\n", memcpy(src, src, -1));
 // }
 
-// int main()
+// // int main()
 // {
 //     // int size = 8539;
 //     // void *ptr = ft_calloc(size, sizeof(int));
