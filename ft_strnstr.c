@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 01:49:22 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/23 01:16:09 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/31 01:51:44 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (NULL);
 }
+

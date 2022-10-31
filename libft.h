@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/28 01:57:16 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/28 23:39:32 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define LIBFT_H
 #define NULL_CHAR    1
 
+char *ft_itoa(int n);
 int	ft_isalnum(int c);
 int ft_isalpha(int c);
 int	ft_isascii(int c);
@@ -27,6 +28,7 @@ int ft_tolower (int c);
 int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 size_t  ft_strlen(const char *s);
+void ft_putnbr_fd(int n, int fd);
 char    *ft_strdup(const char *s1);
 char **ft_split(char const *s, char c);
 char    *ft_strchr(const char *s, int c);

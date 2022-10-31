@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 21:50:03 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/27 22:55:00 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/10/30 02:29:17 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char *ft_strtrim(char const *s1, char const *set)
         return (char *)s1;
     while (*s1 && ft_strchr(set, *s1))
         s1++;
-
     beg = (char *)s1;
     len = ft_strlen(s1);
     s1 += len - NULL_CHAR;

@@ -4,6 +4,7 @@
 #include <stdlib.h>
  
 
+// gcc -fsanitize=leak ... : detect memory leaks
 #define TEST_SUCCESS
 // int	main()
 // {
@@ -131,3 +132,4 @@
 // 	size_t size = 10;
 // 	printf("%s", ft_substr(str, 10, size));
 // }
+
