@@ -6,16 +6,17 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 02:13:50 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/31 21:56:09 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/01 03:08:42 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 #define OUT 0
 #define IN 1
 /* Incrementing (wc) when (s - 1) is a seperator, and (*s) isn't a seperator */
-unsigned    int  count_words(const char *s, char c)
+size_t  count_words(const char *s, char c)
 {
 	unsigned int w_count;
 	int state;
@@ -52,13 +53,15 @@ char **ft_split(char const *s, char c)
     char **p;
 	size_t w_len;
 	size_t row;
-
-	row = 0;
-	p = (char **)malloc((count_words(s, c) + NULL_CHAR) * sizeof(char *));
+	size_t words;
+	
+	words = count_words(s, c);
+	p = (char **)malloc((words + NULL_CHAR) * (sizeof(char *)));
 	if (p == NULL)
 		return p;
-	p[count_words(s, c)] = NULL;
-	while (*s != '\0' && p[row])
+	p[words] = NULL;
+	row = 0;
+	while (*s != '\0' && row < words)
 	{
 		while (*s == c && *s++)
 			;
@@ -77,27 +80,24 @@ char **ft_split(char const *s, char c)
 			ft_strlcpy(p[row], (s - w_len), w_len + NULL_CHAR);
 			row++;
 		}
-		if(!*s)
-			break;
 		s++;
 	}
 	
 	return (p);
 }
 
-#include <stdio.h>
-int main()
-{
-	int i = 0;
-	char *a = "hj h jh jh jh jhfbfbfbfbf  b";
-	char **tab = ft_split(a, ' ');
-	while (tab[i])
+// int main()
+// {
+// 	int i = 0;
+// 	char *a = "hey hey hey hey hey  heyheyheyheyheyheyheyhey=llljhjl fin hj ";
+// 	char **tab = ft_split(a, ' ');
+// 	while (tab[i])
 	
-		{
-			printf("%s\n", tab[i]);
-			i++;
-		}
-}
+// 		{
+// 			printf("%s\n", tab[i]);
+// 			i++;
+// 		}
+// }
 	// printf("%u", count_words("            ", ' '));
 //     int i = 0;
 //     int j = 0;
