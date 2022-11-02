@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/02 10:27:58 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/03 00:10:14 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int ft_tolower (int c);
 int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 size_t  ft_strlen(const char *s);
-void ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 char    *ft_strdup(const char *s1);
 void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
