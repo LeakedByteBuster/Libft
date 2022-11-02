@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/28 23:39:32 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/01 03:14:20 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define LIBFT_H
 #define NULL_CHAR    1
 
+char *ft_itoa(int n);
 char *ft_itoa(int n);
 int	ft_isalnum(int c);
 int ft_isalpha(int c);

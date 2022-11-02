@@ -6,14 +6,13 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 07:46:13 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/02 04:28:20 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/02 04:33:01 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #define TRUE 1;
 #define FALSE 0;
-#include <stdio.h> 
 /*Counting number of digits*/
 int count_n (int n)
 {
@@ -86,10 +85,10 @@ char *ft_itoa(int n)
 	return (str);
 }
 
-int main ()
-{
-	int n = -214745;
-	char *str = ft_itoa(n);
-	printf("\ncount words : %d\n", count_n(n));
-	printf("str : %s\n", str);
-}
+// int main ()
+// {
+// 	int n = -214745;
+// 	char *str = ft_itoa(n);
+// 	printf("\ncount words : %d\n", count_n(n));
+// 	printf("str : %s\n", str);
+// }
