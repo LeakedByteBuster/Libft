@@ -6,7 +6,7 @@
 #    By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 20:08:38 by mfouadi           #+#    #+#              #
-#    Updated: 2022/10/30 00:11:27 by mfouadi          ###   ########.fr        #
+#    Updated: 2022/11/01 07:46:41 by mfouadi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC = ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlcpy.c \
 		ft_strchr.c ft_strrchr.c ft_memset.c ft_bzero.c ft_memcpy.c \
 		ft_memchr.c ft_memcmp.c ft_memmove.c ft_atoi.c ft_calloc.c \
 		ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
-		 
+		ft_itoa.c
 		
 
 HEADER = libft.h
