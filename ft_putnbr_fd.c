@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 23:16:34 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/03 00:55:43 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/03 01:02:09 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);
 	}
+}
