@@ -6,14 +6,12 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 23:16:34 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/03 01:02:09 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/03 01:08:39 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
-#define TRUE 1
-#define FALSE 0
 #define INT_MIN -2147483648
 
 static  void	ft_putchar(char	i, int fd)
