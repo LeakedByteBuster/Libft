@@ -133,3 +133,20 @@
 // 	printf("%s", ft_substr(str, 10, size));
 // }
 
+// int main()
+// {
+//     // int *p;
+//     char *c = "hello";
+//     // int d;
+//     // int e;
+
+// // p = 5;
+//     while (c++ != NULL)
+//     {
+//         printf("%p\n", c);
+//     }
+//         // printf("%zu\n", sizeof(p));
+//         // printf("%p\n", &e);
+//         // printf("%p\n", &d);
+//     return 900;
+// }

@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 23:16:34 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/04 20:16:49 by mfouadi          ###   ########.fr       */
+/*   Created: 2022/11/04 07:36:38 by mfouadi           #+#    #+#             */
+/*   Updated: 2022/11/04 22:31:20 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Adds the node ’new’ at the beginning of the list.
 #include "libft.h"
-#include <unistd.h>
-#define INT_MIN -2147483648
 
-static  void	ft_putchar(char	i, int fd)
-{
-	write(fd, &i, 1);
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n == INT_MIN)
-		write(fd, "-2147483648", 11);
-	if (n < 0)
-	{
-		ft_putchar('-', fd);
-		n *= -1;
-	}	
-	if (ft_isdigit(n + '0'))
-		ft_putchar(n + 48, fd);
-	if (n > 9)
-	{	
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
-}
+// void ft_lstadd_front(t_list **lst, t_list *new)
+// {
+// 	t_list *p;
+	
+// 	p = new;
+// 	if (new == NULL)
+// 		return (p->content = NULL, exit());
+// 	lst = &new;
+// 	p->next = *lst;
+// 	p->content = new;
+// }
