@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 22:25:31 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/01 07:52:40 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/03 02:08:40 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int ft_atoi(const char *str)
 
     sign = 1;
     hold = 0;
-    
+
     // if (ft_strlen(str) >= 19 && str[0] == '-')
     //      return (0);
     // if (ft_strlen(str) >= 20)
