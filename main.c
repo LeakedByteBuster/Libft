@@ -150,3 +150,18 @@
 //         // printf("%p\n", &d);
 //     return 900;
 // }
+
+// int main()
+// {
+//     int a;
+//     int b;
+//     int c;
+
+//     *a = 10;
+//     while (*a != 0)
+//     {
+//     printf("%p\n", a);
+//         a -= 1;
+//     }
+//     return (*a);
+// }
