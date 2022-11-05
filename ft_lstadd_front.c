@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 07:36:38 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/05 01:23:38 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:35:43 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst && *lst && new)
+	if (lst && *lst)
 		new->next = *lst;
+	*lst = new;
 }
+
 // #include<stdio.h>
 // int main()
 // {
