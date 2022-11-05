@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/04 07:35:51 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:25:51 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	ft_isdigit(int c);
 int	ft_isprint(int c);
 int ft_toupper(int  c);
 int ft_tolower (int c);
+int ft_lstsize(t_list *lst);
 int ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
 t_list *ft_lstnew(void *content);
