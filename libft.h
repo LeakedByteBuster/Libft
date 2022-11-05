@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/05 05:04:07 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/05 05:25:49 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void ft_lstadd_front(t_list **lst, t_list *new);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 void    *ft_memchr(const void *s, int c, size_t n);
+void ft_lstdelone(t_list *lst, void (*del)(void*));
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
