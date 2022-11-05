@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 02:03:35 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/05 04:00:54 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/05 04:43:30 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,30 @@ t_list *ft_lstlast(t_list *lst)
         lst = lst->next;
      return (lst);
 }
+
 // int main()
 // {
 //     t_list *v1 = NULL;
 //     t_list *v2 = NULL;
 //     t_list *v3 = NULL;
 
-//     ft_lstnew(v1);
-//     ft_lstlast(v2);
-//     ft_lstlast(v3);
+// // printf("hey\n");
+//     v1 = ft_lstnew("v1");
+//     v2 = ft_lstnew("v2");
+//     v3 = ft_lstnew("v3");
    
-//     ft_lstadd_front(&v3, v2);
-//     ft_lstadd_front(&v2, v1);
-//     v1->content = "hey";
-//     v2->content = "he";
-//     v3->content = "h";
+//     v1->next = v2;
+//     v2->next = v3;
+
+//     ft_lstlast(&v1);
+//     printf("%s", *(v1->content));
     
-//     ft_lstlast(v1);
-//     printf("%s", v1->content);
+    // t_list *tmp;
     
-//     // t_list *tmp;
-    
-//     // tmp = v1;
-//     // while (tmp)
-//     // {
-//     //     printf("%s\n", tmp->content);
-//     //     tmp = 
-//     // }
+    // tmp = v1;
+    // while (tmp)
+    // {
+    //     printf("%s\n", tmp->content);
+    //     tmp = 
+    // }
 // }
