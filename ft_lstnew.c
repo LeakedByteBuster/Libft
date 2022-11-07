@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 03:38:52 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/05 00:42:53 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/06 03:38:08 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_list *ft_lstnew(void *content)
 	node = (t_list *)malloc(sizeof(struct s_list));
 	if (!node)
 		return NULL;
-	if (!node)
-		return (node->content = NULL, node);
+	// if (!node)
+	// 	return (node->content = NULL, node);
 	node->content = content;
 	node->next = NULL;
 	return (node);
