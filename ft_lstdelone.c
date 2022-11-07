@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 05:24:39 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/05 23:42:00 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/06 01:11:11 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ as a parameter and free the node. The memory of
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
     if (!lst)
-        exit(0);
+        return ;
     del(lst->content);
     free(lst);
 }
