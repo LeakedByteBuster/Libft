@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 21:50:03 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/30 02:29:17 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 09:37:56 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,30 @@
 // * from the beginning and the end of the string
 // */
 #include "libft.h"
-char *ft_strtrim(char const *s1, char const *set)
-{
-    char *trimmed;
-    char *beg;
-    size_t len;
 
-    if(s1 == NULL)
-        return (char *)s1;
-    while (*s1 && ft_strchr(set, *s1))
-        s1++;
-    beg = (char *)s1;
-    len = ft_strlen(s1);
-    s1 += len - NULL_CHAR;
-    while (len > 0 && ft_strrchr(set, *s1))
-    {
-        s1--;
-        len--;
-    } 
-    trimmed = (char *)malloc(len + NULL_CHAR);
-    if (trimmed == NULL)
-        return (trimmed);
-    ft_memcpy(trimmed, beg, len);
-    trimmed += len;
-    *trimmed = '\0';
-    return (trimmed - len);
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*trimmed;
+	char	*beg;
+	size_t	len;
+
+	if (s1 == NULL)
+		return ((char *)(s1));
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	beg = (char *)s1;
+	len = ft_strlen(s1);
+	s1 += len - NULL_CHAR;
+	while (len > 0 && ft_strrchr(set, *s1))
+	{
+		s1--;
+		len--;
+	}
+	trimmed = (char *)malloc(len + NULL_CHAR);
+	if (trimmed == NULL)
+		return (trimmed);
+	ft_memcpy(trimmed, beg, len);
+	trimmed += len;
+	*trimmed = '\0';
+	return (trimmed - len);
 }

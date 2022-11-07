@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 19:47:20 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/06 03:13:42 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 08:47:22 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,28 @@
 #include "libft.h"
 #include <stdio.h>
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t tmp;
+	size_t	tmp;
+	char	*cast_dst;
+	char	*cast_src;
 
 	tmp = len;
-	char *cast_dst = (char *)dst;
-	char *cast_src = (char *)src;
+	cast_dst = (char *)dst;
+	cast_src = (char *)src;
 	if (dst > src)
 		while (len-- > 0)
 			cast_dst[len] = cast_src[len];
 	else
 		ft_memcpy(dst, src, len);
 	return (dst);
+}
 
 	// if (len == 0 || (src == NULL && dst == NULL))
 	//     return (dst);
 	// while (len-- > 0)
 	//     *(char *)dst++ = *(char *)src++;
 	// return (dst - tmp);
-}
 // int main()
 // {
 // 	char *p = "0123456789"; //0x0 0x2

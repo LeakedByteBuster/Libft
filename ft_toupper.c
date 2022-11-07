@@ -6,15 +6,15 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 22:25:51 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/25 00:28:28 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 09:47:42 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // lower case to upper case letter conversion
 
-int ft_toupper(int  c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return(c - 32);
-    return (c);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

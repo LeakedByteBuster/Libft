@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 23:16:34 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/04 20:16:49 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 08:50:05 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #define INT_MIN -2147483648
 
-static  void	ft_putchar(char	i, int fd)
+static void	ft_putchar(char i, int fd)
 {
 	write(fd, &i, 1);
 }

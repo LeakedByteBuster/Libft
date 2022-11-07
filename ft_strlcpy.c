@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 17:07:47 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/31 04:55:29 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 09:30:08 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t	dstsize)
 	i = 0;
 	while ((*src != '\0') && (i++ < dstsize - 1))
 		*dst++ = *src++;
-	 *dst = '\0';
+		*dst = '\0';
 	return (srclen);
 }

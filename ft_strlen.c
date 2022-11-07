@@ -6,12 +6,13 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:01:14 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/22 21:47:48 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 09:31:10 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
+//Returns len of the string given
 
 size_t	ft_strlen(const char *s)
 {
