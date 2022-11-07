@@ -6,7 +6,7 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 05:24:39 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/06 01:11:11 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 05:19:49 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,18 @@ as a parameter and free the node. The memory of
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    if (!lst)
-        return ;
-    del(lst->content);
-    free(lst);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
 
 // void del (void *tab)
 // {
-//     free(tab);
+// 	tab = (int )tab;
+//     tab = 5;
 // }
 
 // int main ()
@@ -36,6 +37,6 @@ void ft_lstdelone(t_list *lst, void (*del)(void*))
 //     void *p;
 //     n1 = NULL;
 //     n1 = ft_lstnew(ft_strdup("test test"));
-//     p = del; 
-//     ft_lstdelone(n1, p);
+//     // p = del; 
+//     ft_lstdelone(n1, NULL);
 // }

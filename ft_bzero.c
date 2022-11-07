@@ -6,15 +6,15 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 23:41:20 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/10/23 01:02:21 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 04:44:29 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // write zeroes to a byte string
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    while (n-- > 0 && *(char*)s != '\0')
-        *(char*)s++ = 0;
+	while (n-- > 0 && *(char *)s != '\0')
+		*(char *)s++ = 0;
 }

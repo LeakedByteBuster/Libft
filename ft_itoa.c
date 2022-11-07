@@ -6,23 +6,23 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 07:46:13 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/02 06:19:53 by mfouadi          ###   ########.fr       */
+/*   Updated: 2022/11/07 06:12:03 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #define TRUE 1;
 #define FALSE 0;
-#define INT_MIN -2147483647 -1
+#define INT_MIN -2147483648
 /*Counting number of digits*/
-static	int count_n (int n)
+static	int	count_n(int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n == 0)
-		return 1;
-	if (n < 0)
+		return (1);
+	else if (n < 0)
 		count++;
 	while (n != 0)
 	{
@@ -31,13 +31,26 @@ static	int count_n (int n)
 	}
 	return (count);
 }
-/*Reverse string*/
-static	char	*rev(char *str, int sign)
+
+//Allocates Memory for the string
+
+static char	*alloc(char *p, int n)
 {
-	int j;
-	int i;
-	char tmp;
-	
+	p = (char *)malloc((n + NULL_CHAR) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	p[n] = '\0';
+	return (p);
+}
+
+/*Reverse the string*/
+
+static char	*rev(char *str, int sign)
+{
+	int		i;
+	int		j;
+	char	tmp;
+
 	i = 0;
 	j = ft_strlen(str) - NULL_CHAR;
 	while (i < j)
@@ -52,37 +65,61 @@ static	char	*rev(char *str, int sign)
 		str[0] = '-';
 	return (str);
 }
+
 /*INTEGER to ASCII*/
-char *ft_itoa(int n)
+
+static char	*int_to_ascii(char *str, int *num_dig, int *n)
 {
-	int num_dig;
-	int i;
-	int sign;
-	char *str;
-	
-	if (n == INT_MIN)
-		return (ft_strdup("-2147483648"));
-	sign = FALSE;
-	num_dig = count_n(n);
-	if (!(str = (char *)malloc((num_dig + NULL_CHAR) * sizeof(char))))
-		return (NULL);
-	str[num_dig] = '\0';
+	int	i;
+
 	i = 0;
 	if (n == 0)
 		return (str[i] = '0', str);
+	while (i < *num_dig)
+	{
+		str[i++] = *n % 10 + '0';
+		*n /= 10;
+	}
+	return (str);
+}
+
+char	*ft_itoa(int n)
+{
+	int		num_dig;
+	int		sign;
+	char	*str;
+
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
+	sign = FALSE;
+	str = NULL;
+	num_dig = count_n(n);
+	str = alloc(str, num_dig);
+	if (str == NULL)
+		return (NULL);
 	if (n < 0)
 	{
 		sign = TRUE;
 		n *= -1;
 	}
-	while (i < num_dig)
-	{
-		str[i++] = n % 10 + '0';
-		n /= 10;
-	}
-	rev(str, sign);
-	return (str);
+	str = int_to_ascii(str, &num_dig, &n);
+	return (rev(str, sign), str);
 }
+	// int	i;
+
+	// i = 0;
+	// if (n == 0)
+	// 	return (str[i] = '0', str);
+	// if (n < 0)
+	// {
+	// 	sign = TRUE;
+	// 	n *= -1;
+	// }
+	// while (i < num_dig)
+	// {
+	// 	str[i++] = n % 10 + '0';
+	// 	n /= 10;
+	// }	
 
 // #include <stdio.h>
 // int main ()
