@@ -14,61 +14,29 @@
 #include "libft.h"
 
 #include <stdio.h>
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *hs, const char *nl, size_t n)
 {
-	size_t	hs;
-	size_t	nl;
-	char *begin;
-	char	*hay;
-	char	*need;
-
-	hay = (char *)(haystack);
-	need = (char *)(needle);
+	size_t	i;
 	
-	if (*needle == '\0')
-		return (hay);
-	if (len <= 0 || *haystack == '\0')
+	if (*nl == '\0')
+		return ((char *)hs);
+	if (n <= 0 || *hs == '\0')
 		return (NULL);
-	while (len > 0 && *hay != '\0')
+	while (n > 0 && *hs != '\0')
 	{
-		hs = 0;
-		nl = 0;
-		begin = hay;
-			// printf("%s\n", hay);
-		while (hay[hs] == need[nl] && len > 0 && *hay != '\0')
+		i = 0;
+		while (hs[i] == nl[i] && n > 0 && hs[i] != '\0')
 		{
-			if (need[nl + 1] == '\0')
-			{
-				return (begin);
-			}
-			hs++;
-			nl++;
-			len--;
+			if (nl[i + 1] == '\0')
+				return ((char *)hs);
+			i++;
+			n--;
 		}
-		len--;
-		hay++;
+		n += i;
+		hs++;
+		n--;
 	}
 	return (NULL);
-	// unsigned int i;
-	// unsigned int j;
-
-	// if (!needle[0])
-	// 	return ((char *)haystack);
-	// if (len <= 0 && !haystack[0])
-	// 	return (0);
-	// i = -1;
-	// while (((char *)haystack)[++i] && len--)
-	// {
-	// 	j = 0;
-	// 	while (((char *)haystack)[i] == needle[j] && len--)
-	// 	{
-	// 		if (needle[j+1] == '\0')
-	// 			return (&((char *)haystack)[i - j]);
-	// 		i++;
-	// 		j++;
-	// 	}
-	// }
-	// return (NULL);
 }
 
 // #include <string.h>
