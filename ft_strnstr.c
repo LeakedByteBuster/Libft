@@ -13,11 +13,10 @@
 //locate a substring in a string
 #include "libft.h"
 
-#include <stdio.h>
 char	*ft_strnstr(const char *hs, const char *nl, size_t n)
 {
 	size_t	i;
-	
+
 	if (*nl == '\0')
 		return ((char *)hs);
 	if (n <= 0 || *hs == '\0')
@@ -38,11 +37,3 @@ char	*ft_strnstr(const char *hs, const char *nl, size_t n)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int main()
-// {
-// 	printf("\n\n%s\n\n", strnstr("aaabcabcd", "abcd", 9));
-// 	printf("\n%s\n\n", ft_strnstr("aaabcabcd", "abcd", 9));
-// }
