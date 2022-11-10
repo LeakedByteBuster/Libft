@@ -19,12 +19,12 @@ void	ft_bzero(void *s, size_t n)
 		*(char *)s++ = 0;
 }
 
-#include <string.h>
-#include <stdio.h>
+// #include <string.h>
+// #include <stdio.h>
 
-int iTest = 1;
-int main(void)
-{
+// int iTest = 1;
+// int main(void)
+// {
 
     // char tab[100];
     // memset(tab, 'A', 100);
@@ -47,4 +47,4 @@ int main(void)
     // if(i == 42)
 	// 	printf("Test 3: i = 42");
     // return (0);
-}
+// }
