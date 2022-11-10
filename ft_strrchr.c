@@ -10,22 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//If c is '\0', return s + len_src
+//else, start from the end, and find c (converted to char) in s
+
+/*Converted to char so, ("test", 't' + 256) pass.*/
 #include "libft.h"
-// Unicode (unsigned char)
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	if (!*s)
-		return (NULL);
 	i = ft_strlen(s);
-	if (c == '\0')
-		return ((char *)s + i);
-	while (i >= 0)
+	if ((char)c == '\0')
+		return (s += i, (char *)s);
+	while (i > 0)
 	{
 		i--;
-		if (s[i] == (unsigned char)(c))
+		if ((char)s[i] == (char)(c))
 			return ((char *)(s + i));
 	}
 	return (NULL);
