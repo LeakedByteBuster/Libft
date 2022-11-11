@@ -15,6 +15,7 @@
 // Step 3: 	
 //		- if the next char after spaces, '-' or '+' is not a digit => return 0
 // 		- Declaring a variable of type long long and initializing it to 0;
+//			if pointer s is empty => return (0), (0 * 1 = 0)
 //		- Why Multiplying by 10? so the variable holds all numbers in the string
 //			(i.e "123", after first iteration (hold = 1 * 10 + '2' - '0'= 12))
 //		- Substracting '0' which is 48 in ASCII from 
@@ -22,7 +23,7 @@
 // Step 4 : the variable hold is declared of type long long to check overflow
 //			- if hold > INT_MAX => return 0
 //			- if hold < INT MIN => return -1
-// Step 5 : return hold * sign
+// Step 6 : return hold * sign
 
 /*convert ASCII to integer*/
 #include "libft.h"
