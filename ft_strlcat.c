@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 //concatenate
 // the initial length of dst plus the length of src
 // the return value is >= dstsize, the output string has been truncated.
 //  It is the caller's responsibility to handle this.		
+// #include <stdio.h>
+// #include <string.h>
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -36,3 +37,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (*(dst + len_dst) = '\0', len_dst + len_src);
 }
+// rrrrrr^@^@^@^@a^@^@^@^@
+// lorem ipsum dolor sit ametrrrrrr^@^@^@^@a^@^@^@^@
+// lorem ipsum dolor sit amet
+// #include <string.h>
+// #include <stdio.h>
+
+// int main()
+// {
+// 	// char dest[11];
+
+// 	// dest[10] = 'a';
+// 	// int y = 4;
+
+// 	// printf("%lu\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 11));
+// 	// printf("%s\n", dest);
+// }

@@ -36,3 +36,22 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
+
+// #include <stdlib.h>
+// #include <stdio.h>
+// int main()
+// {
+// 	int	fd;
+// 	fd = fopen("tripouille", "w+");
+// 	ft_putnbr_fd(INT_MIN, fd);
+
+// 	char c;
+
+// 	while (1)
+// 	{
+// 		c = getchar("tripouille", "w+");
+// 		if (c == EOF)
+// 			break;
+// 		printf("%c", c);
+// 	}
+// }
