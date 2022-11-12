@@ -55,30 +55,30 @@ static void	free_tab(char	**tab)
 static char	
 	**alloc_new_str(const char *s, char **p, size_t row, size_t word_len)
 {
-	*(p + (row)) = (char *)malloc(((word_len) + NULL_CHAR) * sizeof(char));
+	p[row] = (char *)malloc((word_len + NULL_CHAR) * sizeof(char));
 	if (p[row] == NULL)
 		return (free_tab(p), NULL);
-	// p[*row][(*word_len)] = '\0';
-	ft_strlcpy(p[(row)], (s - word_len), word_len + NULL_CHAR);
+	// p[(row + word_len)] = NULL;
+	ft_strlcpy(p[row], (s - word_len), word_len + NULL_CHAR);
 	return (p);
 }
 
 /* Splitting the string s */
 
-static char	**split_str(const char *s, char **p, size_t *nbr_words, char *c)
+static char	**split_str(const char *s, char **p, size_t nbr_words, char c)
 {
 	size_t	row;
 	size_t	word_len;
 
 	row = 0;
-	while (*s != '\0' && row < (*nbr_words))
+	while (*s != '\0' && row < nbr_words)
 	{
-		while (*s == *c && *s++)
+		while (*s == c && *s++)
 			;
-		if (*s != *c && *s)
+		if (*s != c && *s)
 		{
 			word_len = 0;
-			while (*s != *c && *s)
+			while (*s != c && *s)
 			{
 				word_len++;
 				s++;
@@ -108,7 +108,7 @@ char	**ft_split(char const *s, char c)
 	if (p == NULL)
 		return (p);
 	p[nbr_words] = NULL;
-	split_str(s, p, &nbr_words, &c);
+	split_str(s, p, nbr_words, c);
 	return (p);
 }
 
