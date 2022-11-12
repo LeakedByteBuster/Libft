@@ -14,11 +14,11 @@
 
 // Counting the len of the new str
 
-static	size_t	ft_count_lenstr(const char *s, unsigned int start, size_t len)
+static	size_t	ft_count_lenstr(const char *s, size_t len)
 {
 	size_t	i;
 
-	i = start;
+	i = 0;
 	while (s[i] != '\0' && len > 0)
 	{
 		i++;
@@ -38,10 +38,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = ft_strlen(s);
 	if (s == NULL || len <= 0 || start > i)
 		return (ft_strdup(""));
-	if (i >= (start + len))
-		i = len;
-	else
-		i = ft_count_lenstr(s, start, len);
+	// if (start >= len && start < i)
+	// 	i = len;
+	// else if (i > (start + len))
+	// 	i = len - start;
+	// else
+		i = ft_count_lenstr(&s[start], len);
 	ptr = (char *)malloc(i + NULL_CHAR);
 	if (!ptr)
 		return (ptr);
