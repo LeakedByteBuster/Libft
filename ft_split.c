@@ -53,13 +53,13 @@ static void	free_tab(char	**tab)
 /*Allocate memory for the string*/
 
 static char	
-	**alloc_new_str(const char *s, char **p, size_t *row, size_t *word_len)
+	**alloc_new_str(const char *s, char **p, size_t row, size_t word_len)
 {
-	*(p + (*row)) = (char *)malloc(*(word_len + NULL_CHAR) * sizeof(char));
-	if (p[*row] == NULL)
+	*(p + (row)) = (char *)malloc(((word_len) + NULL_CHAR) * sizeof(char));
+	if (p[row] == NULL)
 		return (free_tab(p), NULL);
-	p[*row][*(word_len + NULL_CHAR)] = '\0';
-	ft_strlcpy(p[(*row)], (s - *(word_len)), *word_len + NULL_CHAR);
+	// p[*row][(*word_len)] = '\0';
+	ft_strlcpy(p[(row)], (s - word_len), word_len + NULL_CHAR);
 	return (p);
 }
 
@@ -83,7 +83,8 @@ static char	**split_str(const char *s, char **p, size_t *nbr_words, char *c)
 				word_len++;
 				s++;
 			}
-			alloc_new_str(s, p, &row, &word_len);
+			if ((alloc_new_str(s, p, row, word_len)) == NULL)
+				return (NULL);
 			row++;
 		}
 		s++;
@@ -91,13 +92,17 @@ static char	**split_str(const char *s, char **p, size_t *nbr_words, char *c)
 	return (p);
 }
 
+// Allocating for the future strings, then calling split_str function
+
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
 	size_t	nbr_words;
 
-	if (s == NULL)
-		return (NULL);
+	// if (s == NULL){
+	// 	p = NULL;
+	// 	return (p);
+	// }
 	nbr_words = count_words(s, c);
 	p = (char **)malloc((nbr_words + NULL_CHAR) * (sizeof(char *)));
 	if (p == NULL)
@@ -107,18 +112,19 @@ char	**ft_split(char const *s, char c)
 	return (p);
 }
 
+// #include <stdio.h>
 // int main()
 // {
 // 	int i = 0;
-// 	char *a = "hey hey hey hey hey  heyheyheyheyheyheyheyhey=llljhjl fin hj ";
-// 	char **tab = ft_split(a, ' ');
+// 	// char *a = "hey hey hey hey hey  heyheyheyheyheyheyheyhey=llljhjl fin hj ";
+// 	char **tab = ft_split("hello!", ' ');
 // 	while (tab[i])
 // 		{
 // 			printf("%s\n", tab[i]);
 // 			i++;
 // 		}
 // }
-	// printf("%u", count_words("            ", ' '));
+// 	printf("%u", count_words("            ", ' '));
 //     int i = 0;
 //     int j = 0;
 
