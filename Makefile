@@ -51,17 +51,17 @@ $(NAME) : $(OBJ_DIR) $(OBJECTS)
 	 ar rcs $(NAME) $(OBJECTS)
 
 $(OBJ_DIR)/%.o : %.c $(HEADER)
-	@ printf "🔷 Compiling --> "${RE}$(notdir $@)"\n"${NC}
+	@ printf "🔷 Compiling ==> "${RE}$(notdir $@)"\n"${NC}
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR) :
 	mkdir obj
 
-bonus : $(OBJ_B_DIR) $(OBJECTS_B)
+bonus : $(OBJ_B_DIR) $(OBJECTS_B) 
 	printf ${RE}"Linking is done ✅\n"${NC}
 	ar rc $(NAME) $(OBJECTS_B)
 
-$(OBJECTS_B) : $(OBJ_B_DIR)/%.o : %.c $(HEADER)
+$(OBJ_B_DIR)/%.o : %.c $(HEADER)
 	@ printf "🔷 Compiling --> "${RE}$(notdir $@)"\n"${NC}
 	@ $(CC) $(CFLAGS) -c $< -o $@
 

@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//concatenate
+//concatenate two strings
 // the initial length of dst plus the length of src
 // the return value is >= dstsize, the output string has been truncated.
-//  It is the caller's responsibility to handle this.		
-// #include <stdio.h>
-// #include <string.h>
+//  It is the caller's responsibility to handle this.
+// If NULL is sent whether in dst or src, strlcat segfault
+// if dstsize = -1, original doesn't produce any executable
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -24,32 +25,36 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len_dst;
 
 	len_src = ft_strlen(src);
-	i = 0;
-	if (dst == NULL && dstsize == 0)
-		return (len_src);
 	len_dst = ft_strlen(dst);
+	if ((long long)dstsize < 0)
+		return (0);
+	if (dstsize == 0)
+		return (len_src);
 	if (dstsize < len_dst)
 		return (dstsize + len_src);
-	while ((*src != '\0') && i < dstsize - len_dst - 1)
-	{
+	i = len_dst;
+	while ((*src != '\0') && i++ < dstsize - 1)
 		*(dst++ + len_dst) = *src++;
-		i++;
-	}
-	return (*(dst + len_dst) = '\0', len_dst + len_src);
+	*(dst + len_dst) = '\0';
+	return (len_dst + len_src);
 }
-// rrrrrr^@^@^@^@a^@^@^@^@
-// lorem ipsum dolor sit ametrrrrrr^@^@^@^@a^@^@^@^@
-// lorem ipsum dolor sit amet
-// #include <string.h>
-// #include <stdio.h>
 
-// int main()
-// {
-// 	// char dest[11];
+#include <string.h>
+#include <stdio.h>
 
-// 	// dest[10] = 'a';
-// 	// int y = 4;
+int main()
+{
+	// char dest[30]; memset(dest, 0, 30);
+	// char * src = (char *)"AAAAAAAAA";
+	// dest[0] = 'B';
+	// printf("\nMINe : %lu\n", ft_strlcat(dest, src, -1));
+	// printf("%s\n", dest);
 
-// 	// printf("%lu\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 11));
-// 	// printf("%s\n", dest);
-// }
+	char destr[30]; 
+	memset(destr, 0, 30);
+	char * srcr = (char *)"AAAAAAAAAAAAA";
+	destr[0] = 'B';
+	printf("ORIGINAL : %lu\n", strlcat(destr, srcr, -1));
+	printf("%s\n", destr);
+
+}
