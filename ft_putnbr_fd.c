@@ -22,7 +22,15 @@ static void	ft_putchar(char i, int fd)
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == INT_MIN)
+	{
 		write(fd, "-2147483648", 11);
+		return ;
+	}
+	else if ((long long)n < INT_MIN)
+	{
+		write(fd, "-1", 1);
+		return ;
+	}
 	if (n < 0)
 	{
 		ft_putchar('-', fd);
