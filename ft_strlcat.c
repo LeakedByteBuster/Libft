@@ -38,23 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	*(dst + len_dst) = '\0';
 	return (len_dst + len_src);
 }
-
-#include <string.h>
-#include <stdio.h>
-
-int main()
-{
-	// char dest[30]; memset(dest, 0, 30);
-	// char * src = (char *)"AAAAAAAAA";
-	// dest[0] = 'B';
-	// printf("\nMINe : %lu\n", ft_strlcat(dest, src, -1));
-	// printf("%s\n", dest);
-
-	char destr[30]; 
-	memset(destr, 0, 30);
-	char * srcr = (char *)"AAAAAAAAAAAAA";
-	destr[0] = 'B';
-	printf("ORIGINAL : %lu\n", strlcat(destr, srcr, -1));
-	printf("%s\n", destr);
-
-}
