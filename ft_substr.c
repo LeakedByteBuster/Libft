@@ -38,12 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = ft_strlen(s);
 	if (s == NULL || len <= 0 || start > i)
 		return (ft_strdup(""));
-	// if (start >= len && start < i)
-	// 	i = len;
-	// else if (i > (start + len))
-	// 	i = len - start;
-	// else
-		i = ft_count_lenstr(&s[start], len);
+	i = ft_count_lenstr(&s[start], len);
 	ptr = (char *)malloc(i + NULL_CHAR);
 	if (!ptr)
 		return (ptr);
@@ -57,6 +52,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	*ptr = '\0';
 	return (ptr - i);
 }
+
 // #include <stdio.h>
 // int main()
 // {
