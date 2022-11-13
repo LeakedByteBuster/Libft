@@ -56,9 +56,8 @@ static char
 	**alloc_new_str(const char *s, char **p, size_t row, size_t word_len)
 {
 	p[row] = (char *)malloc((word_len + NULL_CHAR) * sizeof(char));
-	if (p[row] == NULL)
+	if (!p[row])
 		return (free_tab(p), NULL);
-	// p[(row + word_len)] = NULL;
 	ft_strlcpy(p[row], (s - word_len), word_len + NULL_CHAR);
 	return (p);
 }
@@ -71,14 +70,14 @@ static char	**split_str(const char *s, char **p, size_t nbr_words, char c)
 	size_t	word_len;
 
 	row = 0;
-	while (*s != '\0' && row < nbr_words)
+	while (s && (*s != '\0' && row < nbr_words))
 	{
-		while (*s == c && *s++)
+		while (s && *s == c && *s++)
 			;
-		if (*s != c && *s)
+		if (s && *s != c && *s)
 		{
 			word_len = 0;
-			while (*s != c && *s)
+			while (s && *s != c && *s)
 			{
 				word_len++;
 				s++;
@@ -87,7 +86,6 @@ static char	**split_str(const char *s, char **p, size_t nbr_words, char c)
 				return (NULL);
 			row++;
 		}
-		s++;
 	}
 	return (p);
 }
@@ -99,55 +97,24 @@ char	**ft_split(char const *s, char c)
 	char	**p;
 	size_t	nbr_words;
 
-	// if (s == NULL){
-	// 	p = NULL;
-	// 	return (p);
-	// }
 	nbr_words = count_words(s, c);
 	p = (char **)malloc((nbr_words + NULL_CHAR) * (sizeof(char *)));
 	if (p == NULL)
-		return (p);
+		return (NULL);
 	p[nbr_words] = NULL;
-	split_str(s, p, nbr_words, c);
+	if (split_str(s, p, nbr_words, c) == NULL)
+		return (NULL);
 	return (p);
 }
 
-// #include <stdio.h>
 // int main()
 // {
 // 	int i = 0;
-// 	// char *a = "hey hey hey hey hey  heyheyheyheyheyheyheyhey=llljhjl fin hj ";
+// 	// char *a = "hey hey hey hey heyjhjl fin hj ";
 // 	char **tab = ft_split("hello!", ' ');
 // 	while (tab[i])
 // 		{
-// 			printf("%s\n", tab[i]);
+// 			printf("{%s}\n", tab[i]);
 // 			i++;
 // 		}
-// }
-// 	printf("%u", count_words("            ", ' '));
-//     int i = 0;
-//     int j = 0;
-
-//     int  row = 5;
-//     int  col = 10;
-//     char s[row][col];
-//     ft_strlcpy(*s, "123456789", 10);
-//     printf ("%s\n", s[0]);
-
-//     // ft_split("hello",'l');
-//     for (i = 1; i < row; i++) 
-//     {
-//         for (j = 0; j < col; j++)
-//         {
-//             s[i][j] = '.';
-//             printf("%c", s[i][j]);
-//         }
-//         printf ("\n");
-//     }
-//     // size_t i;
-//     // size_t j;
-//     // char *ptr = "hello";
-//     // for (i = 0; i < 10; i++)
-//     //     for (j = 0; j < 10; j++)
-//             // printf("%c", ft_split(ptr,'l'));
 // }
