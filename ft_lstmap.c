@@ -51,7 +51,6 @@ Returns : A new list, NULL if Alloc fails */
 // 		printf("error\n");
 // 	free(content);
 // }
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*tmp_head;
@@ -82,6 +81,56 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (head);
 }
 
+// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+// {
+// 	t_list *head;
+// 	t_list **temp;
+// 	char *s;
+
+// 	if (!lst || !del || !f)
+// 		return NULL;
+// 	head = ft_lstnew(s = f(lst->content));
+// 	if (!head)
+// 		return free(s) , NULL;
+// 	temp  = &head; 
+// 	while (lst->next)
+// 	{
+// 		lst = lst->next;
+// 		temp = &(*temp)->next; 
+// 		*temp = ft_lstnew(s = f(lst->content));
+// 		if (!*temp)
+// 			return ft_lstclear(&head, del), free(s) , NULL;
+// 	}
+// 	return (head);
+// }
+
+// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+// {
+// 	static t_list	*head;
+// 	static t_list	**temp;
+
+// 	if (!lst || !del || !f)
+// 		return head;
+// 	if (!head)
+// 	{
+// 	char			*s;
+// 		head = ft_lstnew(s = f(lst->content));
+// 		if (!head)
+// 			return free(s) , NULL;
+// 		temp = &head->next;
+// 	}
+// 	else
+// 	{
+// 	char			*s;
+// 		*temp = ft_lstnew(s = f(lst->content));
+// 		if (!*temp)
+// 			return ft_lstclear(&head, del), free(s) , NULL;
+// 		temp = &(*temp)->next;
+// 	}
+// 	ft_lstmap(lst->next, f, del);
+// 	return NULL;
+// }
+
 // int main()
 // {
 // 	t_list *head = ft_lstnew(ft_strdup("haitam"));
@@ -91,31 +140,24 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 // void    *f(void *p)
 // {
-// 	p = ft_strdup("a");
+// 	p = ft_strdup(p);
 // 	return (p);
 // }
 
 // #include <stdio.h>
 // int main(){
 //     t_list *v0;
-//     t_list *v1;
-//     t_list *v2;
-//     t_list *v3;
-//     t_list *tmp;	
-//     v0 = ft_lstnew("h");
-//     v1 = ft_lstnew("g");
-//     v2 = ft_lstnew("g");
-//     v3 = ft_lstnew("s");
 
-//     ft_lstadd_front(&v1, v0);
-//     ft_lstadd_back(&v1, v2);
-//     ft_lstadd_back(&v2, v3);
+// 	v0 = NULL;
+//     ft_lstadd_back(&v0, NULL);
+//     ft_lstadd_back(&v0, ft_lstnew("2"));
+//     ft_lstadd_back(&v0, ft_lstnew("3"));
 
-//     tmp = v0;
-//     ft_lstmap(tmp, f, free);
-//     while (tmp != NULL)
+
+//     ft_lstmap(v0, f, free);
+//     while (v0 != NULL)
 //     {
-//         printf("%s\n", tmp->content);
-//         tmp = tmp->next;
+//         printf("%s\n", v0->content);
+//         v0 = v0->next;
 //     }
 // }
