@@ -18,7 +18,7 @@
 # include <limits.h>
 # include <stdio.h>
 # include <string.h>
-#include <ctype.h>
+# include <ctype.h>
 
 # ifndef NULL_CHAR
 #  define  NULL_CHAR 1
