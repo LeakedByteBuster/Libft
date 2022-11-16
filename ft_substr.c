@@ -36,7 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 
 	i = ft_strlen(s);
-	if (s == NULL || len <= 0 || start > i)
+	if (s == NULL || len == 0 || start > i)
 		return (ft_strdup(""));
 	i = ft_count_lenstr(&s[start], len);
 	ptr = (char *)malloc(i + NULL_CHAR);
@@ -53,10 +53,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ptr - i);
 }
 
-// #include <stdio.h>
 // int main()
 // {
-// 	printf("%s\n", ft_substr("hola", 2, 210315));
-// 	printf("%zu", ft_strlen(ft_substr("hola", 0, 210315)));
-
+// 	printf("%s\n", ft_substr("hola", 0, -1));
+// 	printf("%s\n", strnstr("hola", "h", -1));
+// printf("%zu", ft_strlen(ft_substr("hola", 0, 210315)));
 // }
