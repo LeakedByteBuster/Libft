@@ -12,7 +12,6 @@
 
 #include "libft.h"
 #include <unistd.h>
-#define INT_MIN -2147483648
 
 static void	ft_putchar(char i, int fd)
 {
