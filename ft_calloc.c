@@ -16,6 +16,8 @@ and returns a pointer to the allocated memory.*/
 contiguously allocates enough space for count objects that are 
 size bytes of memory each and returns a pointer to the allocated memory.
 If space is insufficient, allocation fails and returns a NULL pointer */
+// I can ask for the adress of a NULL adress by requesting a size of 0
+
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -30,3 +32,11 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, size * count);
 	return (ptr);
 }
+
+// int main()
+// {
+// 	char *p = (char *)ft_calloc(0, 0);
+// 	char *p = (char *)calloc(0, 0);
+// 	ft_memset(p, 'A', 10);
+// 	printf("%s\n", p);
+// }
