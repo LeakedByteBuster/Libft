@@ -13,8 +13,9 @@
 #include "libft.h"
 #define TRUE 1;
 #define FALSE 0;
-#define INT_MIN -2147483648
+
 /*Counting number of digits*/
+
 static	int	count_n(int n)
 {
 	int	count;
