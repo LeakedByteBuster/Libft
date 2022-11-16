@@ -26,9 +26,8 @@
 // Step 6 : return hold * sign
 
 /*convert ASCII to integer*/
+
 #include "libft.h"
-#define INT_MIN -2147483648
-#define INT_MAX 2147483647
 
 int	ft_atoi(const char *str)
 {
@@ -57,3 +56,11 @@ int	ft_atoi(const char *str)
 	}
 	return (hold * sign);
 }
+
+// #if 0
+// int main()
+// {
+// 	printf("%d\n", ft_atoi("99999999999999999999999999999999999"));
+// 	printf("%d\n", atoi("99999999999999999999999999999999999"));
+// }
+// #endif
