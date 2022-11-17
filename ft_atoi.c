@@ -30,16 +30,22 @@
 
 #include "libft.h"
 
+static char	*spaces(char *str)
+{
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	return (str);
+}
+
 int	ft_atoi(const char *str)
 {
-	unsigned	long	res;
-	unsigned	long	check;
-	int	sign;
+	unsigned long	res;
+	unsigned long	check;
+	int				sign;
 
 	sign = 1;
 	res = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
+	str = spaces((char *)str);
 	if (*str == '-')
 	{
 		sign *= -1;
