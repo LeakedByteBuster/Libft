@@ -16,14 +16,15 @@
 //		- if the next char after spaces, '-' or '+' is not a digit => return 0
 // 		- Declaring a variable of type long long and initializing it to 0;
 //			if pointer s is empty => return (0), (0 * 1 = 0)
-//		- Why Multiplying by 10? so the variable holds all numbers in the string
-//			(i.e "123", after first iteration (hold = 1 * 10 + '2' - '0'= 12))
+//		- Why Multiplying by 10? so the variable serve as a placereser for
+//			 all numbers in the string (i.e "123", after first iteration 
+//			(res = 1 * 10 + '2' - '0'= 12))
 //		- Substracting '0' which is 48 in ASCII from 
 //			the current character pointed to by pointer s (i.e. ('1' - '0') = 1)
-// Step 4 : the variable hold is declared of type long long to check overflow
-//			- if hold > INT_MAX => return 0
-//			- if hold < INT MIN => return -1
-// Step 6 : return hold * sign
+// Step 4 : the variable res & check are declared to check overflow
+//			- Checking if the OLD res is diffrent than NEW res / 10
+//			- returning 0 (overflow), returning -1 (underflow)
+// Step 6 : return res * sign
 
 /*convert ASCII to integer*/
 
@@ -31,11 +32,12 @@
 
 int	ft_atoi(const char *str)
 {
-	long long	hold;
-	int			sign;
+	unsigned	long	res;
+	unsigned	long	check;
+	int	sign;
 
 	sign = 1;
-	hold = 0;
+	res = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
@@ -47,20 +49,22 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str != '\0' && ft_isdigit(*str))
 	{
-		hold = hold * 10 + *str - '0';
-		if (hold < INT_MIN && sign == -1)
+		check = res;
+		res = res * 10 + *str - '0';
+		if ((res / 10) != check && sign == -1)
 			return (0);
-		else if (hold > INT_MAX && sign == 1)
+		else if ((res / 10) != check && sign == 1)
 			return (-1);
 		str++;
 	}
-	return (hold * sign);
+	return (res * sign);
 }
 
 // #if 0
 // int main()
 // {
-// 	printf("%d\n", ft_atoi("99999999999999999999999999999999999"));
-// 	printf("%d\n", atoi("99999999999999999999999999999999999"));
+// 	printf("Mine %d\n", ft_atoi("9999999999999999999"));
+// 	printf("original %d\n", atoi("9999999999999999999"));
+// 	// printf("%zu\n", sizeof(unsigned char));
 // }
 // #endif
