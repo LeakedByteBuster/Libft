@@ -25,15 +25,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	tmp->next = new;
 }
 
-// #include <stdio.h>
 // int main()
 // {
-// 	char *p = malloc(0);
-	
-// 	printf("%p\n", p);
-// 	p = malloc(0);
-// 	printf("%p\n", p);
-// 	p = malloc(0);
-// 	printf("%p\n", p);
+// 	t_list	*n0;
+// 	t_list	*n1;
+// 	t_list	*n2;
 
+// 	n0 = ft_lstnew("Hey");
+// 	ft_lstadd_back(&n0, (n1 = ft_lstnew(" my")));
+// 	ft_lstadd_back(&n1, (n2 = ft_lstnew(" friend")));
+// 	while (n0 != NULL)
+// 	{
+// 		printf("%s", n0->content);
+// 		n0 = n0->next;
+// 	}
 // }
