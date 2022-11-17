@@ -83,6 +83,14 @@ static char	*int_to_ascii(char *str, int *num_dig, int *n)
 	}
 	return (str);
 }
+/*
+* Step 1 : Checking Integer Overflow (Not Applied)
+* Step 2 : Counting number of digits in n
+* Step 3 : Allocating n bytes equal to the nbr of digits in (n)
+* Step 4 : Converting int to char (Modulo : write least significant digit, 
+*			then fraction to remove last digit)
+* Step 5 : Reversing the output, then returning the string
+*/
 
 char	*ft_itoa(int n)
 {
@@ -106,27 +114,8 @@ char	*ft_itoa(int n)
 	str = int_to_ascii(str, &num_dig, &n);
 	return (rev(str, sign), str);
 }
-	// int	i;
 
-	// i = 0;
-	// if (n == 0)
-	// 	return (str[i] = '0', str);
-	// if (n < 0)
-	// {
-	// 	sign = TRUE;
-	// 	n *= -1;
-	// }
-	// while (i < num_dig)
-	// {
-	// 	str[i++] = n % 10 + '0';
-	// 	n /= 10;
-	// }	
-
-// #include <stdio.h>
-// int main ()
+// int main()
 // {
-// 	int n = -2147483647 -1;
-// 	char *str = ft_itoa(n);
-// 	printf("\ncount words : %d\n", count_n(n));
-// 	printf("str : %s\n", str);
+// 	printf("%s\n", ft_itoa());
 // }
