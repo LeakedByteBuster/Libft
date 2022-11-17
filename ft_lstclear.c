@@ -32,3 +32,35 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
+
+// void	del(void *p)
+// {
+// 	t_list	*pt;
+
+// 	pt = p;
+// 	// free(pt->content);
+// 	while (pt)
+// 	{
+// 		pt->content = ft_strdup("Hey My G! ");
+// 		// pt->content = ft_split((pt->content), 'e');
+// 		pt = pt->next;
+// 	}
+// }
+
+// int main()
+// {
+// 	t_list	*a;
+// 	t_list	*b;
+// 	t_list	*c;
+
+// 	a = ft_lstnew(" My");
+// 	ft_lstadd_front(&a, (b = ft_lstnew("Hey")));
+// 	ft_lstadd_back(&b, (c = ft_lstnew(" Friend")));
+// 	// ft_lstadd_front(&c, (c = ft_lstnew("Friend")));
+// 	ft_lstclear(&a, del);
+// 	while (a)
+// 	{
+// 		printf("%s", a->content);
+// 		a = a->next;
+// 	}
+// }
