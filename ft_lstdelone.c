@@ -25,18 +25,25 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 
-// void del (void *tab)
+// void	del(void *p)
 // {
-// 	tab = (int )tab;
-//     tab = 5;
+// 	free(p);
 // }
 
-// int main ()
+// int main()
 // {
-//     t_list *n1;
-//     void *p;
-//     n1 = NULL;
-//     n1 = ft_lstnew(ft_strdup("test test"));
-//     // p = del; 
-//     ft_lstdelone(n1, NULL);
+// 	t_list	*n0;
+// 	t_list	*n1;
+// 	t_list	*n2;
+
+// 	n0 = ft_lstnew("Hey");
+// 	ft_lstadd_back(&n0, n1 = ft_lstnew(strdup(" My")));
+// 	ft_lstadd_back(&n1, n2 = ft_lstnew(strdup(" MAN")));
+
+// 	ft_lstdelone(n1, free);
+// 	while(n0)
+// 	{
+// 		printf("%s", n0->content);
+// 		n0 = n0->next;
+// 	}
 // }
