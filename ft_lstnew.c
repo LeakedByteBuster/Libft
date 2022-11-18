@@ -25,42 +25,15 @@ t_list	*ft_lstnew(void *content)
 	return (node);
 }
 
-// void display_list(t_list *head)
-// {
-// 	t_list *tmp;
-
-// 	tmp = head;
-// 	while (tmp != NULL)
-// 	{
-// 		printf("%s\n", (tmp->content));
-// 		tmp = tmp->next;
-// 	}
-// }
-
 // int main()
 // {
-// 	t_list *head;
-// 	// t_list end;
-// 	t_list age;
-// 	t_list adress;
-// 	t_list name;
-// 	t_list city;
-// 	t_list start;
+// 	t_list	*n0;
 
-// 	head = NULL;
-// 	// end.content = NULL;
-// 	// Hey sir :->1337->Aga->123->hey
-// 	head = &start;
-// 	age.next = NULL;
-// 	name.next = &age;
-// 	adress.next = &city;
-// 	city.next = &name;
-// 	start.next = &adress;
-// 	start.content = "Hey sir :";
-// 	adress.content = "1337";
-// 	name.content = "123";
-// 	age.content = "hey";
-// 	city.content = "Aga";
-// 	ft_lstnew(head);
-// 	display_list(head);
+// 	n0 = ft_lstnew("Node 1");
+// 	n0->next = ft_lstnew(", Node 2");
+// 	while (n0)
+// 	{
+// 		printf("%s", n0->content);
+// 		n0 = n0->next;
+// 	}
 // }
