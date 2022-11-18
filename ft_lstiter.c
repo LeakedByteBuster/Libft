@@ -16,11 +16,37 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
-		exit(0);
-	while (lst != NULL)
+	if (lst && f)
 	{
-		f(lst->content);
-		lst = lst->next;
+		while (lst != NULL)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
 	}
+	return ;
 }
+
+// void	f(void *p)
+// {
+// 	// char *pt = (char *)p;
+// 	ft_memset(p, 'A', ft_strlen((const char *)p));
+// 	// pt[0] = 'a';
+// }
+
+// int main()
+// {
+// 	t_list	*n0;
+
+// 	n0 = ft_lstnew(strdup("Hello"));
+// 	ft_lstadd_back(&n0, ft_lstnew(strdup("Hello")));
+// 	ft_lstadd_back(&n0, ft_lstnew(strdup("Hello")));
+
+// 	ft_lstiter(n0, f);
+
+// 	while(n0)
+// 	{
+// 		printf("%s\n", n0->content);
+// 		n0 = n0->next;
+// 	}
+// }
