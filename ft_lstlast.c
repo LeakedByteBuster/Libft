@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*Returns the last node of the list.*/
+
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
@@ -23,24 +25,13 @@ t_list	*ft_lstlast(t_list *lst)
 
 // int main()
 // {
-//     t_list *v1 = NULL;
-//     t_list *v2 = NULL;
-//     t_list *v3 = NULL;
+// 	t_list	*n0;
 
-// // printf("hey\n");
-//     v1 = ft_lstnew("v1");
-//     v2 = ft_lstnew("v2");
-//     v3 = ft_lstnew("v3"); 
-//     v1->next = v2;
-//     v2->next = v3;
+// 	n0 = ft_lstnew("hey");
+// 	ft_lstadd_back(&n0, ft_lstnew("ma"));
+// 	ft_lstadd_back(&n0, ft_lstnew("mb"));
+// 	ft_lstadd_back(&n0, ft_lstnew("mc"));
+// 	ft_lstadd_back(&n0, ft_lstnew("md"));
 
-//     ft_lstlast(&v1);
-//     printf("%s", *(v1->content));	
-	// t_list *tmp;
-	// tmp = v1;
-	// while (tmp)
-	// {
-	//     printf("%s\n", tmp->content);
-	//     tmp = 
-	// }
+// 	printf("%s", (ft_lstlast(n0))->content);
 // }
