@@ -30,7 +30,7 @@
 
 #include "libft.h"
 
-static char	*spaces(char *str)
+static char	*ft_spaces(char *str)
 {
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
@@ -45,7 +45,7 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	res = 0;
-	str = spaces((char *)str);
+	str = ft_spaces((char *)str);
 	if (*str == '-')
 	{
 		sign *= -1;

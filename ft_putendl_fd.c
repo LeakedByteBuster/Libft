@@ -10,20 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//Outputs the string 's' to the given file descriptor followed by a newline.
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
-
 	if (s == NULL)
 		return ;
-	i = 0;
-	while (s[i])
-	{
-		write (fd, &s[i], 1);
-		i++;
-	}
+	write (fd, s, ft_strlen(s));
 	write (fd, "\n", 1);
 }

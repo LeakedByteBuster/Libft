@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//save a copy of a string
+// save a copy of a string
+// Segfault when s1 == NULL
+
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -28,3 +29,9 @@ char	*ft_strdup(const char *s1)
 	*ptr1 = '\0';
 	return (ptr1 - s1_len);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_strdup(NULL));
+// 	printf("%s", strdup(NULL));
+// }

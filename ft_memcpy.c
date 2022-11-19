@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// copy n bytes from memory area
+// If dst and src overlap, behavior is undefined
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
@@ -27,3 +29,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		d[i] = s[i];
 	return ((void *)(dst));
 }
+
+// int main()
+// {
+// 	char des[10] = "a";
+// 	char src[] = "Hello";
+// 	printf("%s", ft_memcpy(NULL, "a", 1));
+// 	// printf("%s", memcpy(NULL, "a", 1));
+// }

@@ -46,7 +46,7 @@ static char	*alloc(char *p, int n)
 
 /*Reverse the string*/
 
-static char	*rev(char *str, int sign)
+static char	*ft_rev(char *str, int sign)
 {
 	int		i;
 	int		j;
@@ -112,7 +112,7 @@ char	*ft_itoa(int n)
 		n *= -1;
 	}
 	str = int_to_ascii(str, &num_dig, &n);
-	return (rev(str, sign), str);
+	return (ft_rev(str, sign), str);
 }
 
 // int main()

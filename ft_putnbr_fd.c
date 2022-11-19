@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Outputs the integer n to the given file descriptor
+
 #include "libft.h"
-#include <unistd.h>
 
 static void	ft_putchar(char i, int fd)
 {

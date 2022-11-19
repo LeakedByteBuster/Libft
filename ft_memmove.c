@@ -10,35 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//copy byte string
+//copy len bytes string, he two strings may overlap
 //The two strings may overlap
+
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	tmp;
-	char	*cast_dst;
-	char	*cast_src;
 
 	tmp = len;
-	cast_dst = (char *)dst;
-	cast_src = (char *)src;
 	if (dst > src)
 		while (len-- > 0)
-			cast_dst[len] = cast_src[len];
+			((char *)dst)[len] = ((char *)src)[len];
 	else
 		ft_memcpy(dst, src, len);
 	return (dst);
 }
 
-	// if (len == 0 || (src == NULL && dst == NULL))
-	//     return (dst);
-	// while (len-- > 0)
-	//     *(char *)dst++ = *(char *)src++;
-	// return (dst - tmp);
 // int main()
 // {
-// 	char *p = "0123456789"; //0x0 0x2
-// 	printf("%s", ft_memmove((&p + 3), p, 30));
+// 	// char p[10] = "0123456789"; //012045
+// 	printf("%s", ft_memmove(NULL, NULL, 0));
+// 	// printf("%p\n", p);
+// 	printf("%s", memmove(NULL, NULL, 0));
 // }

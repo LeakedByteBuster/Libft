@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 /* Takes as a parameter a node and frees the memory of
-the node’s content using the function ’del’ given
+the node's content using the function del given
 as a parameter and free the node. The memory of
-’next’ must not be freed. */
+next must not be freed. */
 
 #include "libft.h"
 
@@ -37,8 +37,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 // 	t_list	*n2;
 
 // 	n0 = ft_lstnew("Hey");
-// 	ft_lstadd_back(&n0, n1 = ft_lstnew(strdup(" My")));
-// 	ft_lstadd_back(&n1, n2 = ft_lstnew(strdup(" MAN")));
+// 	ft_lstadd_back(&n0, n1 = ft_lstnew(ft_strdup(" My")));
+// 	ft_lstadd_back(&n1, n2 = ft_lstnew(ft_strdup(" MAN")));
 
 // 	ft_lstdelone(n1, free);
 // 	while(n0)

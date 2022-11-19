@@ -17,6 +17,7 @@
 // Restrict : no other pointer will be used to access 
 //***the object to which it points
 // For strlcpy() that means the length of src.
+
 #include "libft.h"
 #include "stddef.h"
 

@@ -64,7 +64,7 @@ static char
 
 /* Splitting the string s */
 
-static char	**split_str(const char *s, char **p, size_t nbr_words, char c)
+static char	**split_str(const char *s, char **p, char c, size_t nbr_words)
 {
 	size_t	row;
 	size_t	word_len;
@@ -97,24 +97,26 @@ char	**ft_split(char const *s, char c)
 	char	**p;
 	size_t	nbr_words;
 
+	if (!s)
+		return (NULL);
 	nbr_words = count_words(s, c);
 	p = (char **)malloc((nbr_words + NULL_CHAR) * (sizeof(char *)));
 	if (p == NULL)
 		return (NULL);
 	p[nbr_words] = NULL;
-	if (split_str(s, p, nbr_words, c) == NULL)
+	if (split_str(s, p, c, nbr_words) == NULL)
 		return (NULL);
 	return (p);
 }
 
-// int main()
+// int	main()
 // {
-// 	int i = 0;
-// 	// char *a = "hey hey hey hey heyjhjl fin hj ";
-// 	char **tab = ft_split("hello!", ' ');
-// 	while (tab[i])
-// 		{
-// 			printf("{%s}\n", tab[i]);
-// 			i++;
-// 		}
+// 	char	**p = ft_split(NULL, ' ');
+// 	if (p == NULL)
+// 		return (0);
+// 	while (*p != NULL)
+// 	{
+// 		printf("%s\n", *p);
+// 		p++;
+// 	}
 // }

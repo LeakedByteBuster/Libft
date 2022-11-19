@@ -10,13 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// locate character in string
+// locate a character in the given string
+// Segfault when s == NULL 
+
 #include "libft.h"
-// #include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (*s != '\0')
 	{
 		if (s[i] == (char)c)
@@ -27,10 +30,10 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-// #include <string.h>
 
-// int main(){
-	
-// 	char s[] = "tripouille";
-// 	printf("%s", ft_strchr(s, 't' + 256));
+// int main()
+// {
+// 	char s[] = "Testing Man";
+// 	printf("%s", ft_strchr(s, ' '));
+// 	printf("%s", strchr(s, ' '));
 // }

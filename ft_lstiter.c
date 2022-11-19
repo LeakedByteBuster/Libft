@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Applies the function ’f’ on the content of each node.
+// Applies the function f on the content of each node.
 
 #include "libft.h"
 
@@ -29,18 +29,19 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 // void	f(void *p)
 // {
-// 	// char *pt = (char *)p;
-// 	ft_memset(p, 'A', ft_strlen((const char *)p));
-// 	// pt[0] = 'a';
+// 	char *pt = (char *)p;
+// 	// ft_memset(p, 'A', ft_strlen((const char *)p));
+// 	ft_strlcpy(pt, "hihii", 6);
+// 	// pt = strdup("salam");
 // }
 
 // int main()
 // {
 // 	t_list	*n0;
 
-// 	n0 = ft_lstnew(strdup("Hello"));
-// 	ft_lstadd_back(&n0, ft_lstnew(strdup("Hello")));
-// 	ft_lstadd_back(&n0, ft_lstnew(strdup("Hello")));
+// 	n0 = ft_lstnew(ft_strdup("Hello"));
+// 	ft_lstadd_back(&n0, ft_lstnew(ft_strdup("Hello")));
+// 	ft_lstadd_back(&n0, ft_lstnew(ft_strdup("Hello")));
 
 // 	ft_lstiter(n0, f);
 

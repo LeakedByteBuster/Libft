@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Adds the node ’new’ at the beginning of the list.
+// Adds the node new at the beginning of the list.
 
 #include "libft.h"
 
