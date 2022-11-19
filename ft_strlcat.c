@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 //concatenate two strings
 // the initial length of dst plus the length of src
 // the return value is >= dstsize, the output string has been truncated.
 //  It is the caller's responsibility to handle this.
 // If NULL is sent whether in dst or src, strlcat segfault
 // if dstsize = -1, original doesn't produce any executable
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -25,36 +26,23 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len_dst;
 
 	len_src = ft_strlen(src);
-	len_dst = ft_strlen(dst);
-	if ((long long)dstsize < 0)
-		return (0);
-	if (dstsize == 0)
+	if ((dstsize == 0 && dst == NULL) || dstsize == 0)
 		return (len_src);
+	len_dst = ft_strlen(dst);
 	if (dstsize < len_dst)
 		return (dstsize + len_src);
 	i = len_dst;
-	while ((*src != '\0') && i++ < dstsize - 1)
+	while (*src && i++ < dstsize - 1)
 		*(dst++ + len_dst) = *src++;
 	*(dst + len_dst) = '\0';
 	return (len_dst + len_src);
 }
 
-// #include <string.h>
-// #include <stdio.h>
-
 // int main()
 // {
-// 	char dest[30]; memset(dest, 0, 30);
-// 	char * src = (char *)"AAAAAAAAA";
-// 	dest[0] = 'B';
-// 	printf("\nMINe : %lu\n", ft_strlcat(NULL, src, -1));
-// 	printf("%s\n", dest);
-
-// 	// char destr[30]; 
-// 	// memset(destr, 0, 30);
-// 	// char * srcr = (char *)"AAAAAAAAAAAAA";
-// 	// destr[0] = 'B';
-// 	// printf("ORIGINAL : %lu\n", strlcat(NULL, srcr, -1));
-// 	// printf("%s\n", destr);
+// 	char destr[30] = "ccccc"; 
+// 	char * srcr = "AAAAAAAAA";
+// 	printf("ORIGINAL : %lu\n", ft_strlcat(destr, srcr, -1));
+// 	printf("%s\n", destr);
 
 // }
