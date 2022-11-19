@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*Counts the number of nodes in a list.*/
+
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)
@@ -24,3 +26,18 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (lst_len);
 }
+
+// int	main()
+// {
+// 	t_list	*n0 = ft_lstnew("Node 1");
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 2"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 3"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 4"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 5"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 6"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 7"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 8"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 9"));
+// 	ft_lstadd_back(&n0, ft_lstnew("Node 10"));
+// 	printf("%d", ft_lstsize(n0));
+// }
