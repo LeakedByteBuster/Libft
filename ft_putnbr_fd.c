@@ -45,21 +45,17 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-// #include <stdlib.h>
-// #include <stdio.h>
-// int main()
-// {
-// 	int	fd;
-// 	fd = fopen("tripouille", "w+");
-// 	ft_putnbr_fd(INT_MIN, fd);
+int main()
+{
+	char s[BUFSIZ];
+	FILE *fd;
+	fd = fopen("test.txt", "r");
+	if (fd == NULL)
+		return 0;
+	while (fgets(s, 1, fd))
+		printf("%s", s);
 
-// 	char c;
-
-// 	while (1)
-// 	{
-// 		c = getchar("tripouille", "w+");
-// 		if (c == EOF)
-// 			break;
-// 		printf("%c", c);
-// 	}
-// }
+	fclose(fd);
+	// read(1, &fd, 1);
+	// ft_putnbr_fd(INT_MIN, fd);
+}

@@ -21,3 +21,9 @@ void	ft_putendl_fd(char *s, int fd)
 	write (fd, s, ft_strlen(s));
 	write (fd, "\n", 1);
 }
+
+// int main()
+// {
+// 	int fd = open("test.c", O_CREAT | O_RDWR);
+// 	ft_putendl_fd("This is a test niceeee", fd);
+// }

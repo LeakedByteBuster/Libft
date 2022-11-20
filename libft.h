@@ -20,6 +20,8 @@
 # include <string.h>
 # include <ctype.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <sys/file.h>
 
 # ifndef NULL_CHAR
 #  define  NULL_CHAR 1
