@@ -1,7 +1,0 @@
-*.o
-.DS_store
-a.out
-libft.a
-francinette
-.vscode
-.gitignore
