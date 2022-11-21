@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			i;
 
 	if (n != 0)
-	{	
+	{
 		cast_c = (unsigned char)c;
 		cast_s = (unsigned char *)s;
 		i = -1;

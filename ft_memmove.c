@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//copy len bytes string, he two strings may overlap
+//copy len bytes string, the two strings may overlap
 //The two strings may overlap
 
 #include "libft.h"

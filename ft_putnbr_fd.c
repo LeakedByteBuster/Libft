@@ -45,17 +45,17 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-int main()
-{
-	char s[BUFSIZ];
-	FILE *fd;
-	fd = fopen("test.txt", "r");
-	if (fd == NULL)
-		return 0;
-	while (fgets(s, 1, fd))
-		printf("%s", s);
+// int main()
+// {
+// 	char s[BUFSIZ];
+// 	FILE *fd;
+// 	fd = fopen("test.txt", "r");
+// 	if (fd == NULL)
+// 		return 0;
+// 	while (fgets(s, 1, fd))
+// 		printf("%s", s);
 
-	fclose(fd);
-	// read(1, &fd, 1);
-	// ft_putnbr_fd(INT_MIN, fd);
-}
+// 	fclose(fd);
+// 	// read(1, &fd, 1);
+// 	// ft_putnbr_fd(INT_MIN, fd);
+// }
