@@ -32,11 +32,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (((unsigned char *)b) - tmp);
 }
-
-// int main()
-// {
-// 	// char	p[] = "Heey";
-// 	// printf("%s\n", ft_memset(x, '5', 2));
-// 	printf("%d\n", x);
-// 	// printf("%s\n", memset(p, '\0', 2));
-// }

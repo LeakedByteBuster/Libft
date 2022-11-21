@@ -24,9 +24,3 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || ('a' <= c && c <= 'z'));
 }
-
-// int main()
-// {
-// 	printf("Mine %d\n", ft_isalpha('\0'));
-// 	printf("Original %d", isalpha('\0'));
-// }

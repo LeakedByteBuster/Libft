@@ -29,9 +29,3 @@ char	*ft_strdup(const char *s1)
 	*ptr1 = '\0';
 	return (ptr1 - s1_len);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_strdup(NULL));
-// 	printf("%s", strdup(NULL));
-// }

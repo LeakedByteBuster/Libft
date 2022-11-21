@@ -37,12 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	*(dst + len_dst) = '\0';
 	return (len_dst + len_src);
 }
-
-// int main()
-// {
-// 	char destr[30] = "ccccc"; 
-// 	char * srcr = "AAAAAAAAA";
-// 	printf("ORIGINAL : %lu\n", ft_strlcat(destr, srcr, -1));
-// 	printf("%s\n", destr);
-
-// }

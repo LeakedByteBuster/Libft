@@ -24,16 +24,3 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
-// int main()
-// {
-// 	t_list	*n0;
-
-// 	n0 = ft_lstnew("Node 1");
-// 	n0->next = ft_lstnew(", Node 2");
-// 	while (n0)
-// 	{
-// 		printf("%s", n0->content);
-// 		n0 = n0->next;
-// 	}
-// }

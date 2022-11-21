@@ -108,15 +108,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (p);
 }
-
-// int	main()
-// {
-// 	char	**p = ft_split(NULL, ' ');
-// 	if (p == NULL)
-// 		return (0);
-// 	while (*p != NULL)
-// 	{
-// 		printf("%s\n", *p);
-// 		p++;
-// 	}
-// }

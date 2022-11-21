@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	s_len;
 	char			*p;
 
-	if (s == NULL)
+	if (!s || !f)
 		return (NULL);
 	s_len = 0;
 	s_len = ft_strlen(s);

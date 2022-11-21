@@ -23,9 +23,3 @@ int	ft_isalnum(int c)
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
 		|| (c >= '0' && c <= '9'));
 }
-
-// int	main()
-// {
-// 	// printf("Mine : %d\n", ft_isalnum(2147483647));
-// 	// printf("Original :%d", isalnum(2147483647));
-// }

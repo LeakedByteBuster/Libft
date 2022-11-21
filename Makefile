@@ -27,6 +27,13 @@ SRC_B =	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	\
 		ft_lstiter.c	ft_lstdelone.c		ft_lstclear.c	ft_lstmap.c	 ft_lstadd_back.c
 
 #----------------------------------------------------------------------------------------------
+# Adding the object directory path as a prefix to the source files
+#----------------------------------------------------------------------------------------------
+OBJECTS = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
+
+OBJECTS_B = $(addprefix $(OBJ_B_DIR)/,$(SRC_B:.c=.o))
+
+#----------------------------------------------------------------------------------------------
 # Variables
 #----------------------------------------------------------------------------------------------
 NAME = libft.a
@@ -42,14 +49,6 @@ OBJ_B_DIR = obj_B
 RM = /bin/rm -rf
 
 #----------------------------------------------------------------------------------------------
-# Adding the object directory path as a prefix to the source files
-#----------------------------------------------------------------------------------------------
-OBJECTS = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
-
-OBJECTS_B = $(addprefix $(OBJ_B_DIR)/,$(SRC_B:.c=.o))
-
-
-#----------------------------------------------------------------------------------------------
 # Color ANSI colors
 #----------------------------------------------------------------------------------------------
 Green ='\033[1;32m'
@@ -62,7 +61,7 @@ NC ='\033[0m'
 all : $(NAME)
 	
 $(NAME) : $(OBJ_DIR) $(OBJECTS)
-	printf ${Green}"😂 Linking mandatory part is done 😂\n"${NC}
+	printf ${Green}"😂 Mandatory part is ready to be linked 😂\n"${NC}
 	ar rcs $(NAME) $(OBJECTS)
 
 $(OBJ_DIR)/%.o : %.c $(HEADER)
@@ -75,7 +74,7 @@ $(OBJ_DIR) :
 # Bonus dependencies
 #----------------------------------------------------------------------------------------------
 bonus : $(OBJ_B_DIR) $(OBJECTS_B) 
-	printf ${Green}"😂 Linking bonus part is done 😂\n"${NC}
+	printf ${Green}"😂 Bonus part is ready to be linked 😂\n"${NC}
 	ar rc $(NAME) $(OBJECTS_B)
 
 $(OBJ_B_DIR)/%.o : %.c $(HEADER)

@@ -43,32 +43,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (head);
 }
-
-// void	*g(void *p)
-// {
-// 	char	*s;
-
-// 	if (!p)
-// 		return NULL;
-// 	s = ft_strjoin(p, " hello");
-// 	if (!s)
-// 		return NULL;
-// 	return ((void *)s);
-// }
-
-// int main()
-// {
-// 	t_list	*n0 = ft_lstnew("Node 1,");
-
-// 	ft_lstadd_back(&n0, ft_lstnew(" Node 2,"));
-// 	ft_lstadd_back(&n0, ft_lstnew("  Node 3,"));
-// 	ft_lstadd_back(&n0, ft_lstnew("   Node 4,"));
-// 	ft_lstadd_back(&n0, ft_lstnew("    Node 5"));
-
-// 	ft_lstmap(n0, g, free);
-// 	while (n0)q
-// 	{
-// 		printf("\n%s", n0->content);
-// 		n0 = n0->next;
-// 	}
-// }

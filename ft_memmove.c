@@ -27,11 +27,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	return (dst);
 }
-
-// int main()
-// {
-// 	// char p[10] = "0123456789"; //012045
-// 	printf("%s", ft_memmove(NULL, NULL, 0));
-// 	// printf("%p\n", p);
-// 	printf("%s", memmove(NULL, NULL, 0));
-// }

@@ -65,12 +65,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-// #if 0
-// int main()
-// {
-// 	printf("Mine %d\n", ft_atoi("9999999999999999999"));
-// 	printf("original %d\n", atoi("9999999999999999999"));
-// 	// printf("%zu\n", sizeof(unsigned char));
-// }
-// #endif

@@ -114,8 +114,3 @@ char	*ft_itoa(int n)
 	str = int_to_ascii(str, &num_dig, &n);
 	return (ft_rev(str, sign), str);
 }
-
-// int main()
-// {
-// 	printf("%s\n", ft_itoa());
-// }

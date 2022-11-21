@@ -32,19 +32,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		s++;
 	}
 }
-
-// void	f(unsigned int i, char *c)
-// {
-// 	// char *p = "Z";
-// 	printf("\n%d | %c\n", i, c[i]);
-// 	// c[i] = *p;
-// 	// printf("\n%d | %c\n", i, c[i]);
-// 	// printf("\nHey\n");
-// }
-
-// int	main()
-// {
-// 	char p[] = "HEY";
-// 	ft_striteri(p, f);
-// 	printf("%s", p);
-// }

@@ -34,9 +34,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_memchr("truite", 't' + 256, 1));
-// 	// printf("%s", memchr("truite", 't' + 256, 1));
-// }

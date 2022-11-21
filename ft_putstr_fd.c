@@ -16,13 +16,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s == NULL)
+	if (!s)
 		return ;
 	write (fd, s, ft_strlen(s));
 }
-
-// int main()
-// {
-// 	int fd = open("test.txt", O_CREAT | O_WRONLY);
-// 	ft_putstr_fd ("testing this shit", fd);
-// }

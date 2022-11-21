@@ -32,11 +32,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, size * count);
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char *p = (char *)ft_calloc(0, 0);
-// 	char *p = (char *)calloc(0, 0);
-// 	ft_memset(p, 'A', 10);
-// 	printf("%s\n", p);
-// }

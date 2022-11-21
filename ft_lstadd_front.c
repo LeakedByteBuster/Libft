@@ -20,21 +20,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		new->next = *lst;
 	*lst = new;
 }
-
-// int main()
-// {
-// 	t_list	*n0;
-// 	t_list	*n2;
-// 	t_list	*n3;
-
-// 	n0 = NULL;
-// 	ft_lstadd_front(&n0, (n2 = ft_lstnew("My")));
-// 	ft_lstadd_front(&n0, (n3 = ft_lstnew("Hey, ")));
-
-// 	while(n3)
-// 	{
-// 		printf("%s", n3->content);
-// 		n3 = n3->next;
-// 	}
-
-// }

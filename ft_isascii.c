@@ -18,9 +18,3 @@ int	ft_isascii(int c)
 {
 	return (c >= '\0' && c <= DELETE);
 }
-
-// int main()
-// {
-// 	printf("%d\n", ft_isascii('\0'));
-// 	printf("%d\n", isascii('\0'));
-// }
