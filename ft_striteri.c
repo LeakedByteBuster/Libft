@@ -22,13 +22,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (*s)
-	{
-		f(i, s);
-		i++;
-		s++;
-	}
+	i = -1;
+	if (s && f)
+		while (s[++i])
+			f(i, &s[i]);
 }
