@@ -3,6 +3,15 @@
 This project is about coding a C library.
 It contains a lot of general purpose functions my future programs will rely upon.
 
+## Usage:
+```
+$> git clone https://github.com/Mushigarou/Libft.git
+$> cd Libft
+$> make
+```
+Now you have a static library `libft.a` which you can link with other programs.
+
+## Functions
 - [x] ft_atoi
 - [x] ft_bzero
 - [x] ft_calloc
@@ -46,3 +55,9 @@ It contains a lot of general purpose functions my future programs will rely upon
 - [x] ft_substr
 - [x] ft_tolower
 - [x] ft_toupper
+
+## Contributing
+Contributions to this project are welcome! If you find any issues or have improvements to suggest, please feel free to submit a pull request.
+
+## License
+This project is licensed under the MIT license
