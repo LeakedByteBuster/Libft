@@ -6,33 +6,65 @@
 #    By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 20:08:38 by mfouadi           #+#    #+#              #
-#    Updated: 2022/11/07 05:21:33 by mfouadi          ###   ########.fr        #
+#    Updated: 2023/06/15 10:17:44 by mfouadi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #----------------------------------------------------------------------------------------------
 # Source Files
 #----------------------------------------------------------------------------------------------
-SRC = 	ft_isalnum.c	ft_isascii.c	ft_isprint.c	ft_strlcpy.c	\
-		ft_isalpha.c	ft_isdigit.c	ft_strlcat.c	ft_strlen.c		\
-		ft_strncmp.c	ft_toupper.c	ft_tolower.c	ft_strnstr.c	\
-		ft_strchr.c		ft_strrchr.c	ft_memset.c		ft_bzero.c		\
-		ft_memchr.c		ft_memcmp.c		ft_memmove.c	ft_atoi.c		\
-		ft_strdup.c		ft_substr.c		ft_strjoin.c	ft_strtrim.c	\
-		ft_itoa.c		ft_strmapi.c	ft_striteri.c	ft_putchar_fd.c	\
-		ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c  ft_split.c		\
-		ft_calloc.c 	ft_memcpy.c
 
-SRC_B =	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	\
-		ft_lstiter.c	ft_lstdelone.c		ft_lstclear.c	ft_lstmap.c	 ft_lstadd_back.c
+SRC =	conversion_functions/ft_atoi.c	\
+		conversion_functions/ft_itoa.c	\
+		dynamic_allocation/ft_calloc.c	\
+		memory_functions/ft_bzero.c	\
+		memory_functions/ft_memchr.c	\
+		memory_functions/ft_memcmp.c	\
+		memory_functions/ft_memcpy.c	\
+		memory_functions/ft_memmove.c	\
+		memory_functions/ft_memset.c	\
+		data_structures/singly_linked_list/ft_lstadd_back.c	\
+		data_structures/singly_linked_list/ft_lstadd_front.c	\
+		data_structures/singly_linked_list/ft_lstclear.c	\
+		data_structures/singly_linked_list/ft_lstdelone.c	\
+		data_structures/singly_linked_list/ft_lstiter.c	\
+		data_structures/singly_linked_list/ft_lstlast.c	\
+		data_structures/singly_linked_list/ft_lstmap.c	\
+		data_structures/singly_linked_list/ft_lstnew.c	\
+		data_structures/singly_linked_list/ft_lstsize.c	\
+		string_functions/ASCII_functions/ft_isalnum.c	\
+		string_functions/ASCII_functions/ft_isalpha.c	\
+		string_functions/ASCII_functions/ft_isascii.c	\
+		string_functions/ASCII_functions/ft_isdigit.c	\
+		string_functions/ASCII_functions/ft_isprint.c	\
+		string_functions/ASCII_functions/ft_tolower.c	\
+		string_functions/ASCII_functions/ft_toupper.c	\
+		string_functions/dynamic_alloc/ft_strdup.c	\
+		string_functions/ft_putchar_fd.c	\
+		string_functions/ft_putendl_fd.c	\
+		string_functions/ft_putnbr_fd.c	\
+		string_functions/ft_putstr_fd.c	\
+		string_functions/ft_split.c	\
+		string_functions/ft_strchr.c	\
+		string_functions/ft_striteri.c	\
+		string_functions/ft_strjoin.c	\
+		string_functions/ft_strlcat.c	\
+		string_functions/ft_strlcpy.c	\
+		string_functions/ft_strlen.c	\
+		string_functions/ft_strmapi.c	\
+		string_functions/ft_strncmp.c	\
+		string_functions/ft_strnstr.c	\
+		string_functions/ft_strrchr.c	\
+		string_functions/ft_strtrim.c	\
+		string_functions/ft_substr.c
 
 #----------------------------------------------------------------------------------------------
 # Adding the object directory path as a prefix to the source files
 #----------------------------------------------------------------------------------------------
-OBJECTS = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
+OBJS = $(patsubst %, $(OBJ_DIR)/%, $(SRC:.c=.o))
 
-OBJECTS_B = $(addprefix $(OBJ_B_DIR)/,$(SRC_B:.c=.o))
-
+# x:
+# 	@echo $(OBJS)
 #----------------------------------------------------------------------------------------------
 # Variables
 #----------------------------------------------------------------------------------------------
@@ -40,11 +72,11 @@ NAME = libft.a
 
 CFLAGS = -Werror -Wextra -Wall
 
-HEADER = libft.h
+HEADER = inc/libft.h
+
+INC_HEADER = -Iinc
 
 OBJ_DIR = obj
-
-OBJ_B_DIR = obj_B
 
 RM = /bin/rm -rf
 
@@ -60,35 +92,29 @@ NC ='\033[0m'
 #----------------------------------------------------------------------------------------------
 all : $(NAME)
 
-$(NAME) : $(OBJ_DIR) $(OBJECTS)
-	printf ${Green}"😂 Mandatory part is ready to be linked 😂\n"${NC}
-	ar rcs $(NAME) $(OBJECTS)
+$(NAME) : $(OBJS)
+# printf ${Green}"😂 libft.a is ready to be linked 😂\n"${NC}
+	ar rcs $(NAME) $(OBJS)
 
-$(OBJ_DIR)/%.o : %.c $(HEADER)
-	@ printf "♠ Compiling ▻ "${Blue}$(notdir $@)"\n"${NC}
-	@ $(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR) :
-	@ mkdir obj
-#----------------------------------------------------------------------------------------------
-# Bonus dependencies
-#----------------------------------------------------------------------------------------------
-bonus : $(OBJ_B_DIR) $(OBJECTS_B) 
-	printf ${Green}"😂 Bonus part is ready to be linked 😂\n"${NC}
-	ar rc $(NAME) $(OBJECTS_B)
+# bj/%.o : %.c $(HEADERS)
+# 	$(eval FILES_COMPILED = $(shell echo "$(FILES_COMPILED) + 1" | bc ))
+# 	@ printf ${HBLK}"  Compiling ▻"${HBLK}" [%-20s] "${HBLK} $(notdir $@)
+# 	@ echo "$(FILES_COMPILED) * 100 / $(TOTAL_FILES)" | bc | tr -d '\n'
+# 	@ printf "%% \r"${NC}
+# 	@ mkdir -p $(dir $@)
+# 	@ $(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_B_DIR)/%.o : %.c $(HEADER)
-	@ printf "♠ Compiling ▻ "${Blue}$(notdir $@)"\n"${NC}
-	@ $(CC) $(CFLAGS) -c $< -o $@
-
-$(OBJ_B_DIR) :
-	@ mkdir obj_B
+obj/%.o : %.c $(HEADER)
+	 mkdir -p $(dir $@)
+	 $(CC) $(CFLAGS) $(INC_HEADER) -c $< -o $@
+#  printf "♠ Compiling ▻ "${Blue}$(notdir $@)"\r"${NC}
 
 #----------------------------------------------------------------------------------------------
 # Deleting object files
 #----------------------------------------------------------------------------------------------
 clean :
-	$(RM) $(OBJ_DIR) $(OBJ_B_DIR)
+	$(RM) $(OBJ_DIR)
 
 fclean : clean
 	$(RM) $(NAME)
@@ -99,5 +125,5 @@ re : fclean all
 # Special Built-in Target Names
 #----------------------------------------------------------------------------------------------
 .Phony : all clean fclean re
-.SILENT : $(OBJ_DIR) bonus $(NAME)
-.DEFAULT_GOAL := all
+.SILENT : $(OBJ_DIR) bonus $(NAME) fclean clean
+# .DEFAULT_GOAL := all
