@@ -6,22 +6,16 @@
 /*   By: mfouadi <mfouadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:33:09 by mfouadi           #+#    #+#             */
-/*   Updated: 2022/11/07 10:03:43 by mfouadi          ###   ########.fr       */
+/*   Updated: 2023/06/15 10:18:32 by mfouadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h>
-# include <string.h>
-# include <ctype.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <sys/file.h>
 
 # ifndef NULL_CHAR
 #  define  NULL_CHAR 1
